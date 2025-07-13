@@ -1,0 +1,330 @@
+:root {
+  --spinner-animation-duration: 1.4s;
+  --animation-cb-function: cubic-bezier(.46, .03, .52, .96);
+  --spinner-animation: var(--spinner-animation-duration) var(--animation-cb-function) infinite;
+  --white: #fff;
+  --indeterminate-short-primary: var(--ids-indeterminate-indeterminateShortPrimary-54d1c4, #0077c5);
+  --indeterminate-short-secondary: var(--ids-indeterminate-indeterminateShortSecondary-54d1c4, #34bfff);
+}
+
+@keyframes indeterminateShortRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  8% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(470deg);
+  }
+}
+
+@keyframes indeterminateShortCircleTranslateUp {
+  8% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-42%);
+  }
+  56% {
+    transform: translateY(-42%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes indeterminateShortRotationReduceMotion {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes indeterminateShortCircleTransformsTheme {
+  8% {
+    transform: scale(1);
+    fill: var(--indeterminate-short-primary);
+  }
+  50% {
+    transform: scale(.6);
+    fill: var(--indeterminate-short-secondary);
+  }
+  56% {
+    transform: scale(.6);
+    fill: var(--indeterminate-short-secondary);
+  }
+  to {
+    transform: scale(1);
+    fill: var(--indeterminate-short-primary);
+  }
+}
+
+@keyframes indeterminateShortCircleTransformsFill {
+  8% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.6);
+  }
+  56% {
+    transform: scale(.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#web-shell-spinner {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 20010;
+}
+
+#web-shell-spinner.has-background {
+  background-color: #fff;
+}
+
+#web-shell-spinner .circularSpinnerOuter {
+  position: absolute;
+}
+
+#web-shell-spinner .circularSpinnerOuter:nth-of-type(2) {
+  transform: rotate(90deg);
+}
+
+#web-shell-spinner .circularSpinnerOuter:nth-of-type(3) {
+  transform: rotate(180deg);
+}
+
+#web-shell-spinner .circularSpinnerOuter:nth-of-type(4) {
+  transform: rotate(270deg);
+}
+
+#web-shell-spinner .circularSpinnerInner {
+  animation: indeterminateShortCircleTranslateUp var(--spinner-animation);
+  will-change: transform;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #web-shell-spinner .circularSpinnerInner {
+    animation: var(--animation-cb-function) 20s infinite;
+    transform: translateY(-42%);
+  }
+}
+
+#web-shell-spinner .circularSpinnerCircle {
+  position: absolute;
+  will-change: transform;
+  fill: var(--indeterminate-short-primary);
+  animation: indeterminateShortCircleTransformsTheme var(--spinner-animation);
+  animation-iteration-count: infinite;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #web-shell-spinner .circularSpinnerCircle {
+    animation: none;
+  }
+}
+
+#web-shell-spinner .circularSpinnerCircle.fill {
+  animation: indeterminateShortCircleTransformsFill var(--spinner-animation);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #web-shell-spinner .circularSpinnerCircle.fill {
+    animation: none;
+  }
+}
+
+@keyframes IndeterminateShort-indeterminateShortRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  8% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(470deg);
+  }
+}
+
+@keyframes IndeterminateShort-indeterminateShortCircleTranslateUp {
+  8% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-42%);
+  }
+  56% {
+    transform: translateY(-42%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes IndeterminateShort-indeterminateShortRotationReduceMotion {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes IndeterminateShort-indeterminateShortCircleTransformsTheme {
+  8% {
+    transform: scale(1);
+    fill: var(--ids-indeterminate-indeterminateShortPrimary-54d1c4);
+  }
+  50% {
+    transform: scale(.6);
+    fill: var(--ids-indeterminate-indeterminateShortSecondary-54d1c4);
+  }
+  56% {
+    transform: scale(.6);
+    fill: var(--ids-indeterminate-indeterminateShortSecondary-54d1c4);
+  }
+  to {
+    transform: scale(1);
+    fill: var(--ids-indeterminate-indeterminateShortPrimary-54d1c4);
+  }
+}
+
+@keyframes IndeterminateShort-indeterminateShortCircleTransformsFill {
+  8% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.6);
+  }
+  56% {
+    transform: scale(.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#web-shell-spinner .IndeterminateShort-wrapper {
+  align-items: center;
+  animation: IndeterminateShort-indeterminateShortRotation 1.4s linear;
+  animation-iteration-count: infinite;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  will-change: transform;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #web-shell-spinner .IndeterminateShort-wrapper {
+    animation: IndeterminateShort-indeterminateShortRotationReduceMotion 20s linear infinite;
+  }
+}
+
+#web-shell-spinner .IndeterminateShort-circularSpinnerOuter {
+  height: 128px;
+  position: absolute;
+  width: 128px;
+}
+
+#web-shell-spinner .IndeterminateShort-circularSpinnerOuter:nth-of-type(2) {
+  transform: rotate(90deg);
+}
+
+#web-shell-spinner .IndeterminateShort-circularSpinnerOuter:nth-of-type(3) {
+  transform: rotate(180deg);
+}
+
+#web-shell-spinner .IndeterminateShort-circularSpinnerOuter:nth-of-type(4) {
+  transform: rotate(270deg);
+}
+
+#web-shell-spinner .IndeterminateShort-circularSpinnerInner {
+  animation: IndeterminateShort-indeterminateShortCircleTranslateUp 1.4s cubic-bezier(.46,.03,.52,.96) infinite;
+  height: 128px;
+  width: 128px;
+  will-change: transform;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #web-shell-spinner .IndeterminateShort-circularSpinnerInner {
+    animation: 20s cubic-bezier(.46,.03,.52,.96) infinite;
+    transform: translateY(-42%);
+  }
+}
+
+#web-shell-spinner .IndeterminateShort-circularSpinnerCircle {
+  position: absolute;
+  will-change: transform;
+  fill: var(--ids-indeterminate-indeterminateShortPrimary-54d1c4);
+  animation: IndeterminateShort-indeterminateShortCircleTransformsTheme 1.4s cubic-bezier(.46,.03,.52,.96) infinite;
+  animation-iteration-count: infinite;
+  height: 128px;
+  width: 128px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #web-shell-spinner .IndeterminateShort-circularSpinnerCircle {
+    animation: none;
+  }
+}
+
+#web-shell-spinner .IndeterminateShort-circularSpinnerCircle.IndeterminateShort-fill {
+  animation: IndeterminateShort-indeterminateShortCircleTransformsFill 1.4s cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  #web-shell-spinner .IndeterminateShort-circularSpinnerCircle.IndeterminateShort-fill {
+    animation: none;
+  }
+}
+
+:root {
+  --ids-indeterminate-indeterminateShortPrimary-54d1c4: #0077c5;
+  --ids-indeterminate-indeterminateShortSecondary-54d1c4: #34bfff;
+}
+
+#web-shell-spinner .IndeterminateShort-creditkarma.IndeterminateShort-light {
+  --ids-indeterminate-indeterminateShortPrimary-54d1c4: #008600;
+  --ids-indeterminate-indeterminateShortSecondary-54d1c4: #d4d7dc;
+}
+
+#web-shell-spinner .IndeterminateShort-mint.IndeterminateShort-light {
+  --ids-indeterminate-indeterminateShortPrimary-54d1c4: #0493a3;
+  --ids-indeterminate-indeterminateShortSecondary-54d1c4: #07c4d9;
+}
+
+#web-shell-spinner .IndeterminateShort-quickbooks.IndeterminateShort-light {
+  --ids-indeterminate-indeterminateShortPrimary-54d1c4: #2ca01c;
+  --ids-indeterminate-indeterminateShortSecondary-54d1c4: #2ca01c;
+}
+
+#web-shell-spinner .IndeterminateShort-ttfullservice.IndeterminateShort-light,
+#web-shell-spinner .IndeterminateShort-turbotax.IndeterminateShort-light {
+  --ids-indeterminate-indeterminateShortPrimary-54d1c4: #037c8f;
+  --ids-indeterminate-indeterminateShortSecondary-54d1c4: #037c8f;
+}
+
+#web-shell-spinner .IndeterminateShort-proconnect.IndeterminateShort-light {
+  --ids-indeterminate-indeterminateShortSecondary-54d1c4: #21abf6;
+}
+
+#web-shell-spinner .IndeterminateShort-turbo.IndeterminateShort-light {
+  --ids-indeterminate-indeterminateShortPrimary-54d1c4: #c9007a;
+  --ids-indeterminate-indeterminateShortSecondary-54d1c4: #c9007a;
+}

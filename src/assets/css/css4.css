@@ -1,0 +1,318 @@
+/*!
+ * identity-authn-core-ui
+ * Copyright (c) 2025 - Present Intuit Inc. All rights reserved. Unauthorized reproduction is a violation of applicable law. This material contains certain confidential and proprietary information and trade secrets of Intuit Inc.
+ */.Tabs-isHorizontalRuleVisible-90ec91b {
+  box-shadow:inset 0 -2px 0 var(--ids-e8db75,#6b6c72)
+}
+.Tabs-tabsList-10d9c17 {
+  display:flex;
+  outline:0
+}
+.Tabs-tabsList-10d9c17 button {
+  height:auto
+}
+@media only screen and (max-width:600px) {
+  .Tabs-tabsList-10d9c17 {
+    overflow-x:auto
+  }
+}
+.Tabs-tabButton-dd8be9b {
+  background:var(--ids-b72237,transparent);
+  border:var(--ids-fb5870);
+  border-radius:var(--ids-8fd558);
+  cursor:pointer;
+  font-family:inherit;
+  outline:0;
+  padding:var(--ids-87e149,0) var(--ids-1f1535,0) var(--ids-895961,0) var(--ids-e5ea5e,0);
+  position:relative
+}
+.Tabs-tabButton-dd8be9b.Tabs-disabled-8d14925 {
+  opacity:var(--ids-0cbf82,.5);
+  pointer-events:none
+}
+.Tabs-tabButton-dd8be9b[type=button]:focus {
+  box-shadow:none
+}
+.Tabs-tabButton-dd8be9b.Tabs-focusTab-a97995a.Tabs-focusTab-a97995a {
+  border-radius:var(--ids-8fd558);
+  box-shadow:0 0 0 var(--ids-56c77a) var(--ids-aef465);
+  outline:var(--ids-56c77a) solid transparent;
+  overflow:hidden
+}
+.Tabs-tabButton-dd8be9b.Tabs-focusTab-a97995a.Tabs-focusTab-a97995a .Tabs-tabTitle-a619f07 {
+  color:var(--ids-d96d09)
+}
+.Tabs-tabButton-dd8be9b::-moz-focus-inner {
+  border:var(--ids-fb5870)
+}
+.Tabs-tabHighlight-49ee857 {
+  align-content:center;
+  align-items:center;
+  display:flex;
+  flex-wrap:nowrap;
+  padding:var(--ids-ffce6b,8px) var(--ids-88ec26,16px) var(--ids-3d265b,8px) var(--ids-9461c6,16px)
+}
+.Tabs-tabHighlight-49ee857:focus .Tabs-tabTitle-a619f07,
+.Tabs-tabHighlight-49ee857:hover .Tabs-tabTitle-a619f07 {
+  color:var(--ids-d96d09)
+}
+.Tabs-tabHighlight-49ee857:focus .Tabs-tabIcon-eb1575a,
+.Tabs-tabHighlight-49ee857:hover .Tabs-tabIcon-eb1575a {
+  color:var(--ids-04f0ed,#393a3d)
+}
+.Tabs-tabHighlight-49ee857:hover:after {
+  --negative-one:-1;
+  bottom:0;
+  box-shadow:inset 0 calc(var(--negative-one)*var(--ids-324b89,2px)) 0 var(--ids-5d1bc2,#8d9096);
+  content:"";
+  height:var(--ids-0bb3b0);
+  left:0;
+  position:absolute;
+  width:100%
+}
+.Tabs-tabHighlight-49ee857:after {
+  box-shadow:none;
+  content:"";
+  transition:box-shadow var(--ids-cd3800,.15s) var(--ids-a66768,cubic-bezier(0,0,.25,1))
+}
+@media screen and (prefers-reduced-motion:reduce) {
+  .Tabs-tabHighlight-49ee857,
+  .Tabs-tabHighlight-49ee857:after {
+    transition:none
+  }
+}
+.Tabs-tabTitle-a619f07 {
+  color:var(--ids-571d0d,#6b6c72);
+  display:inline-block;
+  font-family:inherit;
+  letter-spacing:0;
+  white-space:nowrap
+}
+.Tabs-activeTab-a1ed1e7 {
+  z-index:2
+}
+.Tabs-activeTab-a1ed1e7 .Tabs-tabHighlight-49ee857:after {
+  border-radius:var(--ids-26461a,0);
+  bottom:0;
+  box-shadow:inset 0 -4px 0 var(--ids-c3478b,#0077c5);
+  content:"";
+  height:var(--ids-0bb3b0);
+  left:0;
+  position:absolute;
+  width:100%
+}
+.Tabs-activeTab-a1ed1e7 .Tabs-tabIcon-eb1575a {
+  color:var(--ids-b1f06c,#393a3d)
+}
+.Tabs-activeTab-a1ed1e7 .Tabs-tabTitle-a619f07 {
+  color:var(--ids-4df0c3,#393a3d);
+  font-weight:var(--ids-795c99,500)
+}
+.Tabs-activeTab-a1ed1e7:hover {
+  background-color:var(--ids-be2a74,transparent)
+}
+.Tabs-tabBadge-f1b37c2 {
+  display:inline-block;
+  margin-left:var(--ids-af92d3,8px)
+}
+.Tabs-tabIcon-eb1575a {
+  color:var(--ids-de4f07,#6b6c72);
+  height:var(--ids-e91ca0,20px);
+  margin-right:var(--ids-8ab9cf,8px);
+  position:relative;
+  top:-1px;
+  width:var(--ids-4b4adf,20px)
+}
+.Tabs-tabPanel-619290b {
+  outline:0;
+  padding-top:var(--ids-a51009,40px)
+}
+.Tabs-tabPanel-619290b .Tabs-disabled-8d14925 {
+  opacity:var(--ids-816571,.5);
+  pointer-events:none
+}
+.Tabs-focusTabPanel-30a287d {
+  border-radius:var(--ids-8fd558);
+  box-shadow:0 0 0 var(--ids-56c77a) var(--ids-aef465);
+  overflow:hidden
+}
+.Tabs-alignment-center-1749e02 {
+  display:flex;
+  width:100%
+}
+.Tabs-alignment-center-1749e02>button {
+  flex:1
+}
+.Tabs-alignment-center-1749e02>button>div {
+  align-items:center;
+  display:flex;
+  justify-content:center
+}
+.Tabs-alignment-center-1749e02 .Tabs-tabIcon-eb1575a {
+  height:24px;
+  width:24px
+}
+.Tabs-creditkarma-2f68363.Tabs-light-b62db5c {
+  --ids-e8db75:#d9dfe2;
+  --ids-aef465:#008600;
+  --ids-d96d09:#000;
+  --ids-04f0ed:#000;
+  --ids-5d1bc2:#859299;
+  --ids-571d0d:#55595b;
+  --ids-c3478b:#21262a;
+  --ids-b1f06c:#000;
+  --ids-4df0c3:#000;
+  --ids-de4f07:#55595b
+}
+:root {
+  --ids-8fd558:4px;
+  --ids-fb5870:0px;
+  --ids-56c77a:2px;
+  --ids-aef465:#0077c5;
+  --ids-d96d09:#393a3d;
+  --ids-0bb3b0:4px
+}
+.Tabs-dark-8a034cf {
+  --ids-e8db75:#8d9096;
+  --ids-aef465:#34bfff;
+  --ids-d96d09:#eceef1;
+  --ids-04f0ed:#eceef1;
+  --ids-571d0d:#e3e5e8;
+  --ids-c3478b:#34bfff;
+  --ids-b1f06c:#eceef1;
+  --ids-4df0c3:#eceef1;
+  --ids-de4f07:#e3e5e8
+}
+.Tabs-intuitnext-5df87af.Tabs-light-b62db5c {
+  --ids-e8db75:#859299;
+  --ids-aef465:#2b77cc;
+  --ids-d96d09:#21262a;
+  --ids-04f0ed:#21262a;
+  --ids-5d1bc2:#859299;
+  --ids-571d0d:#3c4348;
+  --ids-c3478b:#2b77cc;
+  --ids-b1f06c:#21262a;
+  --ids-4df0c3:#21262a;
+  --ids-de4f07:#3c4348
+}
+.Tabs-intuitnext-5df87af.Tabs-dark-8a034cf {
+  --ids-e8db75:#859299;
+  --ids-aef465:#3492ef;
+  --ids-d96d09:#f0f4f6;
+  --ids-04f0ed:#f0f4f6;
+  --ids-5d1bc2:#5d686f;
+  --ids-571d0d:#e2e9ed;
+  --ids-c3478b:#3492ef;
+  --ids-b1f06c:#f0f4f6;
+  --ids-4df0c3:#f0f4f6;
+  --ids-de4f07:#e2e9ed
+}
+.Tabs-mailchimp-3ac599e.Tabs-light-b62db5c {
+  --ids-e8db75:rgba(36,28,21,.3);
+  --ids-aef465:#004e56;
+  --ids-d96d09:#241c15;
+  --ids-04f0ed:#241c15;
+  --ids-5d1bc2:#f6f6f4;
+  --ids-571d0d:rgba(36,28,21,.65);
+  --ids-c3478b:#004e56;
+  --ids-b1f06c:#241c15;
+  --ids-4df0c3:#241c15;
+  --ids-de4f07:rgba(36,28,21,.65)
+}
+.Tabs-mailchimp-3ac599e.Tabs-dark-8a034cf {
+  --ids-d96d09:#fff;
+  --ids-04f0ed:#fff;
+  --ids-571d0d:hsla(0,0%,100%,.5);
+  --ids-b1f06c:#fff;
+  --ids-4df0c3:#fff;
+  --ids-de4f07:hsla(0,0%,100%,.5)
+}
+.Tabs-mint-f3036f6.Tabs-light-b62db5c,
+.Tabs-ttexpress-8bc4615.Tabs-light-b62db5c,
+.Tabs-ttfullservice-af8fee6.Tabs-light-b62db5c,
+.Tabs-turbotax-e1637b2.Tabs-light-b62db5c {
+  --ids-e8db75:#d5dee3;
+  --ids-aef465:#205ea3;
+  --ids-d96d09:#21262a;
+  --ids-04f0ed:#21262a;
+  --ids-5d1bc2:#859299;
+  --ids-571d0d:#5d686f;
+  --ids-c3478b:#21262a;
+  --ids-b1f06c:#21262a;
+  --ids-4df0c3:#21262a;
+  --ids-de4f07:#5d686f
+}
+.Tabs-neutral-5e3d026.Tabs-light-b62db5c {
+  --ids-aef465:#393a3d;
+  --ids-c3478b:#000
+}
+.Tabs-neutral-5e3d026.Tabs-dark-8a034cf {
+  --ids-aef465:#393a3d;
+  --ids-c3478b:#eceef1
+}
+.Tabs-quickbooks-8a3696f.Tabs-light-b62db5c {
+  --ids-e8db75:#8d9096;
+  --ids-56c77a:3px;
+  --ids-5d1bc2:#babec5;
+  --ids-c3478b:#2ca01c;
+  --ids-26461a:2px 2px 0px 0px;
+  --ids-795c99:600
+}
+.Tabs-quickbooks-8a3696f.Tabs-dark-8a034cf {
+  --ids-e8db75:#6b6c72;
+  --ids-56c77a:3px;
+  --ids-571d0d:#babec5;
+  --ids-c3478b:#53b700;
+  --ids-26461a:2px 2px 0px 0px;
+  --ids-795c99:600;
+  --ids-de4f07:#babec5
+}
+.Tabs-quickbookshorizon-ac7e502.Tabs-light-b62db5c,
+.Tabs-quickbooksnext-3e32b81.Tabs-light-b62db5c {
+  --ids-e8db75:#859299;
+  --ids-aef465:#2b77cc;
+  --ids-d96d09:#21262a;
+  --ids-04f0ed:#21262a;
+  --ids-5d1bc2:#c3ced5;
+  --ids-571d0d:#4c555b;
+  --ids-c3478b:#205ea3;
+  --ids-b1f06c:#21262a;
+  --ids-4df0c3:#21262a;
+  --ids-de4f07:#4c555b
+}
+.Tabs-quickbookshorizon-ac7e502.Tabs-dark-8a034cf,
+.Tabs-quickbooksnext-3e32b81.Tabs-dark-8a034cf {
+  --ids-e8db75:#859299;
+  --ids-aef465:#5dabff;
+  --ids-d96d09:#f0f4f6;
+  --ids-04f0ed:#f0f4f6;
+  --ids-5d1bc2:#4c555b;
+  --ids-571d0d:#adbac2;
+  --ids-c3478b:#5dabff;
+  --ids-b1f06c:#f0f4f6;
+  --ids-4df0c3:#f0f4f6;
+  --ids-de4f07:#adbac2
+}
+.Tabs-ttexpress-8bc4615.Tabs-dark-8a034cf {
+  --ids-e8db75:#17497f;
+  --ids-aef465:#50fbd4;
+  --ids-d96d09:#fff;
+  --ids-04f0ed:#fff;
+  --ids-571d0d:#d1dee9;
+  --ids-b1f06c:#fff;
+  --ids-4df0c3:#fff;
+  --ids-de4f07:#d1dee9
+}
+.Tabs-turbotaxmarketing-cd756b3.Tabs-light-b62db5c {
+  --ids-e8db75:#d5dee3;
+  --ids-aef465:#205ea3;
+  --ids-d96d09:#21262a;
+  --ids-04f0ed:#21262a;
+  --ids-5d1bc2:#859299;
+  --ids-571d0d:#5d686f;
+  --ids-c3478b:#205ea3;
+  --ids-b1f06c:#21262a;
+  --ids-4df0c3:#21262a;
+  --ids-de4f07:#5d686f
+}
+/*# sourceMappingURL=81754.e8a11d370689ef8e.css.map*/

@@ -1,0 +1,210 @@
+/*!
+ * identity-authn-core-ui
+ * Copyright (c) 2025 - Present Intuit Inc. All rights reserved. Unauthorized reproduction is a violation of applicable law. This material contains certain confidential and proprietary information and trade secrets of Intuit Inc.
+ */.Checkbox-labelWrapper-7af1114 {
+  align-items:flex-start;
+  cursor:pointer;
+  display:flex;
+  font-family:inherit;
+  gap:var(--ids-d88748,8px);
+  margin-bottom:var(--ids-bf0530,16px)
+}
+.Checkbox-labelWrapper-7af1114:not(.Checkbox-labelDisabled-0bf98f6):focus span:first-of-type,
+.Checkbox-labelWrapper-7af1114:not(.Checkbox-labelDisabled-0bf98f6):hover span:first-of-type {
+  border-color:var(--ids-55213f,#0077c5)
+}
+.Checkbox-labelWrapper-7af1114.Checkbox-labelDisabled-0bf98f6 {
+  cursor:not-allowed
+}
+.Checkbox-labelWrapper-7af1114.Checkbox-labelDisabled-0bf98f6 .Checkbox-descriptionText-b7c4dc9 {
+  color:var(--ids-a6cc04,#8d9096)
+}
+.Checkbox-labelWrapper-7af1114.Checkbox-size-medium-7ef0e91 {
+  font-size:var(--ids-810f5d)
+}
+.Checkbox-labelWrapper-7af1114.Checkbox-size-small-5352c7f {
+  font-size:14px!important
+}
+.Checkbox-labelWrapper-7af1114 .Checkbox-descriptionText-b7c4dc9 {
+  color:var(--ids-efbb45)
+}
+.Checkbox-spanWrapper-f3ead69 {
+  align-items:flex-start;
+  color:var(--ids-aaa101,#393a3d);
+  display:flex;
+  opacity:var(--ids-e14ad9,1)
+}
+.Checkbox-spanWrapper-f3ead69.Checkbox-spanDisabled-7ba5746 {
+  color:var(--ids-5f17a2,#8d9096);
+  cursor:not-allowed
+}
+.Checkbox-spanWrapper-f3ead69.Checkbox-size-medium-7ef0e91 {
+  font-size:var(--ids-810f5d)
+}
+.Checkbox-spanWrapper-f3ead69.Checkbox-size-small-5352c7f {
+  align-self:center;
+  font-size:14px!important
+}
+.Checkbox-fieldsetWrapper-fe6735d {
+  border:0;
+  font-family:inherit;
+  margin:0;
+  padding:0
+}
+.Checkbox-fieldsetWrapper-fe6735d .Checkbox-helperText-2f4d380 {
+  color:var(--ids-efbb45)
+}
+.Checkbox-checkboxGroup-5400da9 {
+  display:flex
+}
+.Checkbox-checkboxGroup-5400da9>label {
+  margin-right:24px
+}
+.Checkbox-checkboxGroup-5400da9.Checkbox-checkboxGroupVertical-86275d7 {
+  display:flex;
+  flex-direction:column
+}
+.Checkbox-checkboxGroup-5400da9.Checkbox-checkboxGroupVertical-86275d7>label {
+  margin-right:0
+}
+.Checkbox-legendWrapper-66cb0de {
+  align-items:center;
+  color:var(--ids-d5b0df,#393a3d);
+  font-weight:var(--ids-f40f56,500);
+  line-height:var(--ids-efd995,1.5);
+  margin-bottom:var(--ids-af4dc0,16px);
+  padding-left:0
+}
+.Checkbox-legendWrapper-66cb0de.Checkbox-size-medium-7ef0e91 {
+  font-size:var(--ids-810f5d)
+}
+.Checkbox-legendWrapper-66cb0de.Checkbox-size-small-5352c7f {
+  font-size:14px!important
+}
+@media only screen and (min-width:768px) {
+  .Checkbox-checkboxGroup-5400da9.Checkbox-checkboxGroupVertical-86275d7>label,
+  .Checkbox-labelWrapper-7af1114 {
+    display:inline-flex;
+    margin-right:auto
+  }
+}
+.Checkbox-creditkarma-0d00e78.Checkbox-light-354ffd5 {
+  --ids-55213f:#55595b;
+  --ids-5f17a2:#c7cdd1;
+  --ids-d5b0df:#000;
+  --ids-a6cc04:#c7cdd1;
+  --ids-efbb45:#55595b;
+  --ids-aaa101:#000
+}
+:root {
+  --ids-810f5d:16px;
+  --ids-efbb45:#6b6c72
+}
+.Checkbox-dark-efb894f {
+  --ids-55213f:#34bfff;
+  --ids-5f17a2:#6b6c72;
+  --ids-d5b0df:#eceef1;
+  --ids-a6cc04:#6b6c72;
+  --ids-efbb45:#e3e5e8;
+  --ids-aaa101:#eceef1
+}
+.Checkbox-intuitnext-4d4e3ea.Checkbox-light-354ffd5 {
+  --ids-55213f:#2b77cc;
+  --ids-5f17a2:#859299;
+  --ids-d5b0df:#21262a;
+  --ids-a6cc04:#859299;
+  --ids-efbb45:#3c4348;
+  --ids-aaa101:#21262a
+}
+.Checkbox-intuitnext-4d4e3ea.Checkbox-dark-efb894f {
+  --ids-55213f:#3492ef;
+  --ids-5f17a2:#5d686f;
+  --ids-d5b0df:#f0f4f6;
+  --ids-a6cc04:#5d686f;
+  --ids-efbb45:#e2e9ed;
+  --ids-aaa101:#f0f4f6
+}
+.Checkbox-mailchimp-fa708cd.Checkbox-light-354ffd5 {
+  --ids-55213f:#241c15;
+  --ids-5f17a2:rgba(36,28,21,.65);
+  --ids-d5b0df:#241c15;
+  --ids-a6cc04:rgba(36,28,21,.65);
+  --ids-efbb45:rgba(36,28,21,.65);
+  --ids-aaa101:#241c15
+}
+.Checkbox-mailchimp-fa708cd.Checkbox-dark-efb894f {
+  --ids-efbb45:hsla(0,0%,100%,.5);
+  --ids-aaa101:#fff;
+  --ids-d5b0df:#fff
+}
+.Checkbox-mint-d19e0be.Checkbox-light-354ffd5,
+.Checkbox-ttfullservice-cc9fa38.Checkbox-light-354ffd5,
+.Checkbox-turbotax-a3b6587.Checkbox-light-354ffd5,
+.Checkbox-turbotaxmarketing-10054e5.Checkbox-light-354ffd5 {
+  --ids-55213f:#21262a;
+  --ids-5f17a2:#859299;
+  --ids-d5b0df:#21262a;
+  --ids-a6cc04:#859299;
+  --ids-efbb45:#5d686f;
+  --ids-aaa101:#21262a
+}
+.Checkbox-neutral-3697a63.Checkbox-light-354ffd5 {
+  --ids-55213f:#393a3d
+}
+.Checkbox-quickbooks-ab1b100.Checkbox-light-354ffd5 {
+  --ids-55213f:#2ca01c
+}
+.Checkbox-quickbooks-ab1b100.Checkbox-dark-efb894f {
+  --ids-55213f:#53b700;
+  --ids-5f17a2:#8d9096;
+  --ids-a6cc04:#8d9096;
+  --ids-efbb45:#babec5
+}
+.Checkbox-quickbookshorizon-fffcfe6.Checkbox-light-354ffd5 {
+  --ids-55213f:#4c555b;
+  --ids-5f17a2:#859299;
+  --ids-d5b0df:#21262a;
+  --ids-a6cc04:#859299;
+  --ids-efbb45:#4c555b;
+  --ids-aaa101:#21262a
+}
+.Checkbox-quickbookshorizon-fffcfe6.Checkbox-dark-efb894f {
+  --ids-55213f:#adbac2;
+  --ids-5f17a2:#859299;
+  --ids-d5b0df:#f0f4f6;
+  --ids-a6cc04:#859299;
+  --ids-efbb45:#adbac2;
+  --ids-aaa101:#f0f4f6
+}
+.Checkbox-quickbooksnext-f9b87cb.Checkbox-light-354ffd5 {
+  --ids-55213f:#00892e;
+  --ids-5f17a2:#859299;
+  --ids-d5b0df:#21262a;
+  --ids-a6cc04:#859299;
+  --ids-efbb45:#4c555b;
+  --ids-aaa101:#21262a
+}
+.Checkbox-quickbooksnext-f9b87cb.Checkbox-dark-efb894f {
+  --ids-55213f:#00a63b;
+  --ids-5f17a2:#859299;
+  --ids-d5b0df:#f0f4f6;
+  --ids-a6cc04:#859299;
+  --ids-efbb45:#adbac2;
+  --ids-aaa101:#f0f4f6
+}
+.Checkbox-ttexpress-272f70c.Checkbox-light-354ffd5 {
+  --ids-55213f:#d1dee9;
+  --ids-5f17a2:#859299;
+  --ids-d5b0df:#21262a;
+  --ids-a6cc04:#859299;
+  --ids-efbb45:#5d686f;
+  --ids-aaa101:#21262a
+}
+.Checkbox-ttexpress-272f70c.Checkbox-dark-efb894f {
+  --ids-a6cc04:#9aa7b0;
+  --ids-efbb45:#d1dee9;
+  --ids-aaa101:#fff;
+  --ids-5f17a2:#9aa7b0;
+  --ids-d5b0df:#fff
+}
+/*# sourceMappingURL=39720.3f8990bf13352b09.css.map*/

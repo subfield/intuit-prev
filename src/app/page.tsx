@@ -1,103 +1,197 @@
-import Image from "next/image";
+"use client";
+
+import { LargeSpinner, InlineSpinner } from "@/components/atom/spinner";
+import { Password } from "@/components/organisms/password";
+import { Username } from "@/components/organisms/username";
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [loading, setLoading] = useState(true);
+  const [loaderDone, setLoaderDone] = useState(false);
+  const [enterPwd, setEnterPwd] = useState(false);
+  const [value, setValue] = useState("");
+  const [init, setInit] = useState(true);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaderDone(true);
+    }, 1001);
+  }, []);
+
+  useEffect(() => {
+    if (loaderDone) {
+      setTimeout(
+        () => {
+          setLoading(false);
+          setInit(false);
+        },
+        init ? 501 : 100
+      );
+    }
+  }, [loaderDone, enterPwd]);
+
+  return (
+    <>
+      <LargeSpinner timer={1000} />
+      {/* <script nonce="">const theme=__shellInternal&&__shellInternal.appExperience&&__shellInternal.appExperience.appTheme?__shellInternal.appExperience.appTheme:"intuit";__shellInternal&&__shellInternal.nonce&&(window.__webpack_nonce__=__shellInternal.nonce),document.querySelectorAll(".IndeterminateShort-circularSpinnerCircle").forEach((e=>{e.classList.add(`IndeterminateShort-${theme}`)}));const requirePromise=e=>new Promise(((r,n)=>{if(!window.require)return n(new Error("window.require is not defined"));require(e,r,(e=>{e instanceof Error&&(e.internalMessage="Shell - failed to fetch shell module"),n(e)}))})),bootPromise=getShellExperiments("enable-pre-boot-hook")&&window.__middlewareConfig&&"function"==typeof window.__middlewareConfig.preBoot?window.__middlewareConfig.preBoot():Promise.resolve();bootPromise.then((()=>{return e=["web-shell"],new Promise(((r,n)=>{if(!window.require)return n(new Error("window.require is not defined"));require(e,r,(e=>{e instanceof Error&&(e.internalMessage="Shell - failed to fetch shell module"),n(e)}))}));var e}),(e=>{throw e instanceof Error&&(e.internalMessage="Shell - failed to execute preBoot middleware"),e})).then((({default:e})=>e)).then((({default:e})=>e())).catch((e=>{window.__shellInternal.logger.error(e&&e.internalMessage||"Shell - failed to start shell",{},e)}))</script><script type="text/javascript" src="/S6sF-uEpXollx_flaGpQY1je/aOiQzXSrwbzmfbEDVa/Fht-GR0iXgM/AlB8JF/RmcyI"></script> */}
+      <div id="___appshell">
+        <div id="app" className="app-shell">
+          <div data-theme="intuit" data-colorscheme="light">
+            <div className="shell-view">
+              <div className="main">
+                <div className="body-container">
+                  <div className="body" data-id="bodyNode" role="main">
+                    <div
+                      data-testid="SignInSignUpWidget"
+                      className="ius-hosted-ui theme-intuit-ecosystem"
+                      data-morpheus-widget="identity-authn-core-ui/sign-in-sign-up-hosted@1.0.0"
+                      data-morpheus-widget-instance="identity-authn-core-ui:identity-authn-core-ui/sign-in-sign-up-hosted@1.0.0:82"
+                      data-morpheus-pluginid="identity-authn-core-ui"
+                    >
+                      <div data-theme="intuit" data-colorscheme="light">
+                        <div data-theme="intuit" data-colorscheme="light">
+                          <div className="styledComponents__HostedSisuHeightDiv-sc-1n0nm38-0 kzLZHH">
+                            <div>
+                              <div
+                                data-testid="IuxBookendsContainer"
+                                className="Bookends__ProdModFlexCenteredColumn-sc-163uul4-4 eVIhHK"
+                              >
+                                <div className="Bookends__NonStyledDiv-sc-163uul4-9 Bookends__ProdModStyledDiv-sc-163uul4-10 eSgvvN gDyzNr">
+                                  <div
+                                    className="styledComponents__ProdModStyledWidgetContainer-kizisb-9 ioNEQy ius"
+                                    data-testid="IuxBookendsHeaderContainer"
+                                  >
+                                    {loaderDone && (
+                                      <div className="BookendsHeader__StyledBookendHeader-sc-1dyhyro-0 blBsbd">
+                                        <>
+                                          <div
+                                            data-testid="IuxHeaderLogo"
+                                            aria-hidden="true"
+                                            className="IuxHeaderLogo__HeaderLogoContainer-sc-1uo1ya3-0 bQzPFA"
+                                          >
+                                            <a
+                                              href="#"
+                                              className="IuxHeaderLogo__StyledAnchor-sc-1uo1ya3-1 hJHoSA"
+                                            ></a>
+                                          </div>
+                                          {loading ? (
+                                            <InlineSpinner />
+                                          ) : (
+                                            <>
+                                              {!enterPwd ? (
+                                                <Username
+                                                  setEnterPwd={setEnterPwd}
+                                                  setLoading={setLoading}
+                                                  value={value}
+                                                  setValue={setValue}
+                                                />
+                                              ) : (
+                                                <Password
+                                                  value={value}
+                                                  setEnterPwd={setEnterPwd}
+                                                  setLoading={setLoading}
+                                                />
+                                              )}
+                                            </>
+                                          )}
+                                        </>
+                                      </div>
+                                    )}
+                                  </div>
+                                  <div className="BookendsFooterContainer__FooterOutsideWrapper-sc-3y9p8r-0 BookendsFooterContainer__ProdModFooterOutsideWrapper-sc-3y9p8r-1 cujhnf gslAv">
+                                    <footer
+                                      data-testid="IuxLegalAndCopyrightFooter"
+                                      className="BookendsFooter__StyledFooter-m32qkh-0 gPKBya"
+                                    >
+                                      <div
+                                        data-testid="IuxLegalLinksSection"
+                                        className="BookendsLegalPrivacySecurityLinks__LinkContainer-r1xb63-0 BookendsLegalPrivacySecurityLinks__ProdModLinkContainer-r1xb63-1 bevLbd iCaFmM"
+                                      >
+                                        <ul className="BookendsLegalPrivacySecurityLinks__LinkUnorderedList-r1xb63-2 ctlOKR">
+                                          <li className="BookendsLegalPrivacySecurityLinks__LinkListItem-r1xb63-3 gIaSSR">
+                                            <a
+                                              href="https://www.intuit.com/legal/"
+                                              target="_blank"
+                                              rel="noopener"
+                                              data-testid="IuxLegalLink"
+                                              className="idsTSLink Link-link-4bfcef8 Link-light-6e531aa"
+                                            >
+                                              <span
+                                                className="Link-linkText-87f9e81 Typography-light-f6c67d3 Typography-body-4-7ca445b Typography-regular-4140b6b"
+                                                data-testid="innerLinkText"
+                                              >
+                                                Legal
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li className="BookendsLegalPrivacySecurityLinks__LinkListItem-r1xb63-3 gIaSSR">
+                                            <a
+                                              href="https://www.intuit.com/privacy/statement/"
+                                              target="_blank"
+                                              rel="noopener"
+                                              data-testid="IuxPrivacyLink"
+                                              className="idsTSLink Link-link-4bfcef8 Link-light-6e531aa"
+                                            >
+                                              <span
+                                                className="Link-linkText-87f9e81 Typography-light-f6c67d3 Typography-body-4-7ca445b Typography-regular-4140b6b"
+                                                data-testid="innerLinkText"
+                                              >
+                                                Privacy
+                                              </span>
+                                            </a>
+                                          </li>
+                                          <li className="BookendsLegalPrivacySecurityLinks__LinkListItem-r1xb63-3 gIaSSR">
+                                            <a
+                                              href="https://security.intuit.com/"
+                                              target="_blank"
+                                              rel="noopener"
+                                              data-testid="IuxSecurityLink"
+                                              className="idsTSLink Link-link-4bfcef8 Link-light-6e531aa"
+                                            >
+                                              <span
+                                                className="Link-linkText-87f9e81 Typography-light-f6c67d3 Typography-body-4-7ca445b Typography-regular-4140b6b"
+                                                data-testid="innerLinkText"
+                                              >
+                                                Security
+                                              </span>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div
+                                        data-testid="IuxCopyrightSection"
+                                        className="BookendsFooter__StyledDiv-m32qkh-1 kyDFtb"
+                                      >
+                                        <div className="BookendsTerms__FooterText-sc-1t6rken-0 cwGJgm">
+                                          Intuit, QuickBooks, QB, TurboTax,
+                                          ProConnect, Credit Karma, and
+                                          Mailchimp are registered trademarks of
+                                          Intuit Inc. Terms and conditions,
+                                          features, support, pricing, and
+                                          service options subject to change
+                                          without notice.
+                                        </div>
+                                        <div className="BookendsCopyright__FooterText-sc-14acr3j-0 dzUeVe">
+                                          © 2025 Intuit, Inc. All rights
+                                          reserved.
+                                        </div>
+                                      </div>
+                                    </footer>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }

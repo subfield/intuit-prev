@@ -1,0 +1,13 @@
+/*!
+ * identity-authn-core-ui
+ * Copyright (c) 2025 - Present Intuit Inc. All rights reserved. Unauthorized reproduction is a violation of applicable law. This material contains certain confidential and proprietary information and trade secrets of Intuit Inc.
+ */
+.ius-hosted-ui .ius {
+  box-sizing: border-box;
+}
+@media (min-width: 380px) {
+  .ius-hosted-ui .ius {
+    width: 380px;
+  }
+}
+/*# sourceMappingURL=62923.b8eb3900b7750ea4.css.map*/

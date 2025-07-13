@@ -1,0 +1,214 @@
+/*!
+ * identity-authn-core-ui
+ * Copyright (c) 2025 - Present Intuit Inc. All rights reserved. Unauthorized reproduction is a violation of applicable law. This material contains certain confidential and proprietary information and trade secrets of Intuit Inc.
+ */.Link-link-4bfcef8 {
+  color:var(--ids-c4dcc1);
+  cursor:pointer;
+  font-family:inherit;
+  padding:4px;
+  text-decoration:none
+}
+.Link-link-4bfcef8:has(:is(h1,
+h2,
+h3,
+h4,
+h5,
+h6)) {
+  display:block;
+  width:-moz-fit-content;
+  width:fit-content
+}
+.Link-link-4bfcef8:link {
+  color:var(--ids-c4dcc1)
+}
+.Link-link-4bfcef8.Link-secondary-efa0612,
+.Link-link-4bfcef8.Link-secondary-efa0612 .Link-iconWrapper-65f1eb5>svg,
+.Link-link-4bfcef8.Link-secondary-efa0612:hover {
+  color:var(--ids-afaf4e)
+}
+.Link-link-4bfcef8.Link-secondary-efa0612:hover .Link-linkText-87f9e81 {
+  text-decoration:underline
+}
+.Link-link-4bfcef8.Link-secondary-efa0612:active {
+  color:var(--ids-afaf4e)
+}
+.Link-link-4bfcef8.Link-secondary-efa0612:active .Link-linkText-87f9e81 {
+  text-decoration:underline
+}
+.Link-link-4bfcef8.Link-secondary-efa0612:active .Link-iconWrapper-65f1eb5>svg,
+.Link-link-4bfcef8.Link-secondary-efa0612:visited,
+.Link-link-4bfcef8.Link-secondary-efa0612:visited .Link-iconWrapper-65f1eb5>svg,
+.Link-link-4bfcef8.Link-secondary-efa0612[data-a11yfocus]:focus,
+.Link-link-4bfcef8.Link-secondary-efa0612[data-a11yfocus]:focus .Link-iconWrapper-65f1eb5>svg {
+  color:var(--ids-afaf4e)
+}
+.Link-link-4bfcef8.Link-complementary-f13157f {
+  color:var(--ids-1128ed,#34bfff)
+}
+.Link-link-4bfcef8.Link-complementary-f13157f:visited,
+.Link-link-4bfcef8.Link-complementary-f13157f:visited .Link-iconWrapper-65f1eb5>svg {
+  color:var(--ids-f356c4)
+}
+.Link-link-4bfcef8:visited,
+.Link-link-4bfcef8:visited .Link-iconWrapper-65f1eb5>svg {
+  color:var(--ids-db0c08)
+}
+.Link-link-4bfcef8[data-a11yfocus]:focus {
+  border-radius:var(--ids-f2f474,2px);
+  box-shadow:0 0 0 2px var(--ids-bcca6b,#0077c5);
+  outline:2px solid transparent
+}
+.Link-link-4bfcef8:hover {
+  color:var(--ids-0a68c2);
+  text-decoration:underline
+}
+.Link-link-4bfcef8:hover .Link-iconWrapper-65f1eb5>svg {
+  color:var(--ids-0a68c2)
+}
+.Link-link-4bfcef8:active {
+  color:var(--ids-9d009e,#055393)
+}
+.Link-link-4bfcef8:active .Link-iconWrapper-65f1eb5>svg {
+  color:var(--ids-0a68c2)
+}
+.Link-link-4bfcef8 .Link-iconWrapper-65f1eb5 {
+  align-items:center;
+  display:inline-flex;
+  gap:4px
+}
+.Link-link-4bfcef8 .Link-iconWrapper-65f1eb5>svg {
+  font-size:inherit;
+  height:1em;
+  width:1em
+}
+.Link-inline-fc22bbf {
+  color:var(--ids-c4dcc1)
+}
+.Link-inline-fc22bbf .Link-linkText-87f9e81 {
+  text-decoration:underline
+}
+.Link-inherit-22f6447 {
+  font-size:inherit;
+  font-weight:inherit;
+  line-height:inherit
+}
+.Link-creditkarma-bb45551.Link-light-6e531aa {
+  --ids-c4dcc1:#036d4a;
+  --ids-afaf4e:#000;
+  --ids-db0c08:#008600;
+  --ids-bcca6b:#008600;
+  --ids-0a68c2:#337522;
+  --ids-9d009e:#008600
+}
+.Link-creditkarma-bb45551.Link-dark-01e77f9 {
+  --ids-c4dcc1:#008600;
+  --ids-db0c08:#008600;
+  --ids-bcca6b:#008600;
+  --ids-9d009e:#008600
+}
+.Link-iep-615edbe.Link-light-6e531aa {
+  --ids-c4dcc1:#236cff;
+  --ids-afaf4e:#3c4348;
+  --ids-f356c4:#b496ff;
+  --ids-db0c08:#7c00f6;
+  --ids-bcca6b:#236cff;
+  --ids-f2f474:4px
+}
+:root {
+  --ids-c4dcc1:#0365ac;
+  --ids-afaf4e:#393a3d;
+  --ids-f356c4:#a898ff;
+  --ids-db0c08:#7a3dd8;
+  --ids-0a68c2:#055393
+}
+.Link-dark-01e77f9 {
+  --ids-c4dcc1:#34bfff;
+  --ids-afaf4e:#eceef1;
+  --ids-db0c08:#a898ff;
+  --ids-bcca6b:#34bfff;
+  --ids-0a68c2:#5dccff;
+  --ids-9d009e:#71d2ff
+}
+.Link-intuitnext-ef6e0af.Link-light-6e531aa {
+  --ids-c4dcc1:#205ea3;
+  --ids-afaf4e:#21262a;
+  --ids-1128ed:#7cbcff;
+  --ids-f356c4:#c0abff;
+  --ids-db0c08:#7c00f6;
+  --ids-bcca6b:#2b77cc;
+  --ids-0a68c2:#17497f;
+  --ids-9d009e:#103661
+}
+.Link-intuitnext-ef6e0af.Link-dark-01e77f9 {
+  --ids-c4dcc1:#3492ef;
+  --ids-afaf4e:#f0f4f6;
+  --ids-1128ed:#7cbcff;
+  --ids-f356c4:#c0abff;
+  --ids-db0c08:#b496ff;
+  --ids-bcca6b:#3492ef;
+  --ids-0a68c2:#5dabff;
+  --ids-9d009e:#7cbcff
+}
+.Link-mailchimp-70aacf2.Link-light-6e531aa {
+  --ids-c4dcc1:#03688e;
+  --ids-afaf4e:#241c15;
+  --ids-db0c08:#004e56;
+  --ids-bcca6b:#004e56;
+  --ids-0a68c2:#004e56;
+  --ids-9d009e:#004e56
+}
+.Link-mailchimp-70aacf2.Link-dark-01e77f9 {
+  --ids-c4dcc1:#4bc4c2;
+  --ids-afaf4e:#fff;
+  --ids-db0c08:#000;
+  --ids-0a68c2:#000;
+  --ids-9d009e:#000
+}
+.Link-neutral-e0ea208.Link-dark-01e77f9,
+.Link-neutral-e0ea208.Link-light-6e531aa {
+  --ids-bcca6b:#393a3d
+}
+.Link-quickbookshorizon-e6404ca.Link-light-6e531aa,
+.Link-quickbooksnext-e26f917.Link-light-6e531aa {
+  --ids-c4dcc1:#13599b;
+  --ids-afaf4e:#21262a;
+  --ids-bcca6b:#2b77cc;
+  --ids-0a68c2:#17497f;
+  --ids-9d009e:#205ea3
+}
+.Link-quickbookshorizon-e6404ca.Link-dark-01e77f9,
+.Link-quickbooksnext-e26f917.Link-dark-01e77f9 {
+  --ids-c4dcc1:#5dabff;
+  --ids-afaf4e:#f0f4f6;
+  --ids-bcca6b:#5dabff;
+  --ids-0a68c2:#7cbcff;
+  --ids-9d009e:#5dabff
+}
+.Link-ttexpress-4dcfd1c.Link-dark-01e77f9 {
+  --ids-afaf4e:#fff;
+  --ids-bcca6b:#50fbd4
+}
+.Link-ttfullservice-f3215fc.Link-light-6e531aa {
+  --ids-c4dcc1:#036c8a;
+  --ids-0a68c2:#00c1bf;
+  --ids-9d009e:#008481
+}
+.Link-turbotax-bcb5884.Link-light-6e531aa {
+  --ids-c4dcc1:#13599b;
+  --ids-afaf4e:#21262a;
+  --ids-1128ed:#fff;
+  --ids-f356c4:#fff;
+  --ids-db0c08:#490097;
+  --ids-bcca6b:#21262a;
+  --ids-0a68c2:#17497f;
+  --ids-9d009e:#103661
+}
+.Link-turbotaxmarketing-0442124.Link-light-6e531aa {
+  --ids-c4dcc1:#13599b;
+  --ids-afaf4e:#21262a;
+  --ids-db0c08:#490097;
+  --ids-bcca6b:#205ea3;
+  --ids-0a68c2:#17497f;
+  --ids-9d009e:#103661
+}
+/*# sourceMappingURL=44467.cdd0c9df1b1710b6.css.map*/

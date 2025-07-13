@@ -1,0 +1,420 @@
+.kzLZHH {
+  min-height: 95vh;
+}
+
+.eVIhHK {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px auto auto;
+}
+
+.gDyzNr {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-top: 65px;
+  min-height: calc(-65px + 100vh);
+}
+
+.eSgvvN {
+  width: 100%;
+}
+
+.ioNEQy {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border: unset;
+  font-size: 14px;
+  max-width: 380px;
+  margin: unset;
+}
+
+.ioNEQy {
+  border-radius: var(--radius-large);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px 0px !important;
+}
+
+@media (min-width: 768px) {
+  .ioNEQy {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ioNEQy {
+    border-radius: unset;
+    box-shadow: unset;
+  }
+
+  .eVIhHK {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .gDyzNr {
+    margin-top: unset;
+    min-height: calc(0px + 100vh);
+  }
+
+  .gPKBya {
+    max-width: 380px;
+    margin: 0px auto;
+  }
+}
+
+.blBsbd {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.bQzPFA {
+  padding: 20px 0px !important;
+}
+
+.hJHoSA {
+  background-image: url(https://uxfabric.intuitcdn.net/identity-authn-core-ui/c8bf23fa3230058f.svg);
+  display: block;
+  height: 20px;
+  width: 94.33px;
+}
+
+.hXHHbY {
+  text-align: center;
+}
+
+.iOUNHt {
+  color: rgb(57, 58, 61);
+  text-align: center;
+  margin: 0px 0px 19px;
+}
+
+.fXKrQy {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 2px;
+}
+
+.xLVQH {
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.iQcJay {
+  font-size: 20px;
+}
+
+.ksuuCf {
+  display: flex;
+  flex-direction: column;
+}
+
+.jxlqeV {
+  margin-bottom: 0px !important;
+  width: 100%;
+}
+
+.hHtoCl {
+  margin: 10px 0px 0px !important;
+}
+
+.eNklXx {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dDQzHx {
+  background-image: none;
+  margin: 10px 0px 0px !important;
+}
+
+.hcNkxF {
+  margin-bottom: -20px;
+}
+
+.kNXnJi {
+  margin: 0px !important;
+}
+
+.jtlksN {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 20px;
+  color: var(--color-text-secondary);
+}
+
+.biRsfs {
+  letter-spacing: -0.02em;
+}
+
+.ONZWC {
+  padding: 0px !important;
+}
+
+.tIvQU {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.dDQzHx {
+  background-image: none;
+  margin: 10px 0px 0px !important;
+}
+
+.frZTZY {
+  margin-top: 10px;
+  color: var(--color-text-primary);
+}
+
+.hjYPHy {
+  padding: 0px !important;
+  min-width: unset;
+  min-height: unset;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+.hAkLBa {
+  padding: 0px !important;
+  min-width: unset;
+  min-height: unset;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.gkXOHc {
+  padding: 0px !important;
+  margin-top: 0px !important;
+  font-weight: normal;
+}
+
+.dnJHbn:hover,
+.jsHfSQ:hover {
+  background-color: transparent !important;
+}
+
+.hjYPHy span {
+  padding: 0px !important;
+}
+
+.hAkLBa span {
+  padding: 0px !important;
+}
+
+.dnMAmh {
+  background-color: rgb(255, 255, 255);
+  margin: 30px -30px -30px;
+  font-size: 10px;
+  color: rgb(93, 104, 111);
+  padding: 16px;
+  text-align: center;
+}
+.dqgyjX {
+  background-color: inherit;
+  padding: 0px !important;
+  margin: 20px 0px !important;
+  color: var(--color-text-secondary);
+}
+
+.hzEbdp {
+  margin-bottom: 20px;
+  border-width: 1px 0px 0px !important;
+  border-right-style: initial;
+  border-bottom-style: initial;
+  border-left-style: initial;
+  border-right-color: initial;
+  border-bottom-color: initial;
+  border-left-color: initial;
+  border-image: initial;
+  border-top-style: solid;
+  border-top-color: rgb(226, 225, 225);
+}
+
+.ONZWC {
+  padding: 0px !important;
+}
+
+.dnMAmh > a > span {
+  font-size: inherit;
+}
+
+.cujhnf {
+  color: rgb(80, 80, 80);
+  width: 100%;
+  margin-top: 30px;
+}
+
+.gslAv {
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.gPKBya {
+  font-family: var(--font-family-body);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.bevLbd {
+  padding: 0px 0px 10px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.iCaFmM {
+  padding: 0px !important;
+  margin: 0px 5% 12px;
+}
+
+.ctlOKR {
+  list-style: none none;
+  padding-inline-start: 0px !important;
+  margin: 0px !important;
+}
+
+.gIaSSR {
+  display: inline;
+  padding-left: 10px;
+}
+
+.gIaSSR:first-child {
+  padding-left: 0px !important;
+}
+
+.kyDFtb {
+  text-align: center;
+  margin: 0px 5%;
+}
+
+.cwGJgm {
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.dzUeVe {
+  font-weight: 400;
+}
+
+.NmNzP {
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+}
+
+.jqexoW {
+  margin: 24px auto 35px;
+}
+
+.fRGurN {
+  margin: 20px 0px !important;
+  text-align: left;
+}
+
+.hjVtt {
+  font-size: 14px;
+}
+
+.fAjyJO {
+  margin-bottom: 4px;
+  color: var(--color-ui-negative);
+}
+
+.jsHfSQ {
+  display: inline;
+}
+
+.etCwug {
+  text-align: center;
+}
+
+.bkUAuk {
+  margin-bottom: 0px !important;
+}
+
+.iOUNHt {
+  color: rgb(57, 58, 61);
+  text-align: center;
+  margin: 0px 0px 19px;
+}
+
+.xLVQH {
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.fnQwvy {
+  border: medium;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: inherit;
+  width: 100%;
+  text-overflow: ellipsis;
+  color: var(--color-text-primary);
+}
+
+.hxAZMq {
+  margin-top: 4px !important;
+}
+
+.hAkLBa {
+  padding: 0px !important;
+  min-width: unset;
+  min-height: unset;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.jrZlCL {
+  min-height: 90px;
+}
+
+.jgZCKa {
+  float: right;
+}
+
+.iPRtDl {
+  padding: 0px !important;
+}
+
+.hVRMXB {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: rgb(186, 190, 197);
+}
+
+.hVRMXB::before,
+.hVRMXB::after {
+  content: "";
+  flex: 1 1 0%;
+  border-bottom: 1px solid rgb(186, 190, 197);
+  margin: auto 5px;
+}
+
+.loading {
+  pointer-events: none;
+  opacity: 0.4;
+}

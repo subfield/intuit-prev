@@ -1,0 +1,12 @@
+/*!
+ * identity-authn-core-ui
+ * Copyright (c) 2025 - Present Intuit Inc. All rights reserved. Unauthorized reproduction is a violation of applicable law. This material contains certain confidential and proprietary information and trade secrets of Intuit Inc.
+ */body {
+  background-color:#eceef1;
+  margin:0
+}
+.background-color-experiment-overrides .ius-hosted-ui.theme-intuit-ecosystem,
+.background-color-experiment-overrides body {
+  background-color:#fff
+}
+/*# sourceMappingURL=58272.4767f43b8301d9e9.css.map*/
