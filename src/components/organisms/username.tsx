@@ -16,13 +16,17 @@ export const Username = ({
   setValue,
   setLoading,
 }: StageProps) => {
-  const [showError, setShowError] = useState(false);
+  const [showError] = useState(false);
   const [noValue, setNoValue] = useState(false);
 
   const [checked, setChecked] = useState(true);
-  const [msg, setMsg] = useState("Something went wrong! Please try again.");
-  const [title, setTitle] = useState("");
-  const [link, setLink] = useState("");
+  //   const [msg, setMsg] = useState("Something went wrong! Please try again.");
+  //   const [title, setTitle] = useState("");
+  //   const [link, setLink] = useState("");
+  //
+  const [msg] = useState("Something went wrong! Please try again.");
+  const [title] = useState("");
+  const [link] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -33,7 +37,7 @@ export const Username = ({
       return;
     }
 
-    const randomNum = Math.floor(Math.random() * 100) + 1;
+    // const randomNum = Math.floor(Math.random() * 100) + 1;
     // if (value && randomNum % 2 === 0) {
     //   setMsg("We can’t find an account with what you entered. New to Intuit?");
     //   setTitle("Double check your info");
@@ -69,7 +73,7 @@ export const Username = ({
                 id="IdentifierFirstHeader"
                 data-testid="IdentifierFirstHeader"
               >
-                Let's get you in to Intuit
+                Let{"'"}s get you in to Intuit
               </h6>
             </div>
             <span
@@ -128,7 +132,7 @@ export const Username = ({
                       }
                       value={value}
                       onFocus={() => {
-                        noValue && setNoValue(false);
+                        if (noValue) setNoValue(false);
                       }}
                     />
                     {noValue && (

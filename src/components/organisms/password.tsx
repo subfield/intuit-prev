@@ -197,8 +197,8 @@ export const Password = ({
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     onFocus={() => {
-                      noPassword && setNoPassword(false);
-                      showErr && setShowErr(false);
+                      if (noPassword) setNoPassword(false);
+                      if (showErr) setShowErr(false);
                     }}
                   />
                 </div>
