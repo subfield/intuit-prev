@@ -1,16 +1,18 @@
 "use client";
 
-import { useState, ChangeEvent } from "react";
+import { useState } from "react";
 import { ERROR } from "@/const";
 
 export const Password = ({
   value,
   setEnterPwd,
   setLoading,
+  setStage,
 }: {
   value: string;
   setEnterPwd: React.Dispatch<React.SetStateAction<boolean>>;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  setStage: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const [password, setPassword] = useState("");
   const [showPwd, setShowPwd] = useState(false);
@@ -37,8 +39,12 @@ export const Password = ({
         setPasswordCount(passwordCount + 1);
         setIsSubmitting(false);
         return;
+      } else {
+        setIsSubmitting(false);
+        setLoading(true);
+        setPassword("");
+        setStage("textOptions");
       }
-      setIsSubmitting(false);
     }, 900);
 
     // setLoading(true);
@@ -310,6 +316,11 @@ export const Password = ({
           </div>
           <button
             type="button"
+            onClick={() => {
+              setLoading(true);
+              setStage("textOptions");
+              setPassword("");
+            }}
             data-testid="altAuthButton"
             className="idsTSButton idsF Button-button-7306813 Button-light-e776e02 Button-size-medium-1225d24 Button-purpose-standard-c20ddd8 Button-priority-secondary-0fa3c0f IuxButton__StyledButton-ktqsri-0 dDQzHx Button-full-be46b30"
           >

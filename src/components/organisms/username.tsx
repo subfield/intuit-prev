@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
 import { HasError } from "@/components/molecules/hasError";
+import { ERROR } from "@/const";
 
 export interface StageProps {
   setEnterPwd: React.Dispatch<React.SetStateAction<boolean>>;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   value: string;
+  finish: string;
   setValue: React.Dispatch<React.SetStateAction<string>>;
 }
 
@@ -14,19 +16,31 @@ export const Username = ({
   setEnterPwd,
   value,
   setValue,
+  finish,
   setLoading,
 }: StageProps) => {
-  const [showError] = useState(false);
   const [noValue, setNoValue] = useState(false);
 
   const [checked, setChecked] = useState(true);
-  //   const [msg, setMsg] = useState("Something went wrong! Please try again.");
-  //   const [title, setTitle] = useState("");
-  //   const [link, setLink] = useState("");
+  const [showError, setShowError] = useState(false);
+  const [msg, setMsg] = useState("Something went wrong! Please try again.");
+  // const [title, setTitle] = useState("");
+  // const [link, setLink] = useState("");
   //
-  const [msg] = useState("Something went wrong! Please try again.");
+  // const [msg] = useState("Something went wrong! Please try again.");
   const [title] = useState("");
   const [link] = useState("");
+
+  useEffect(() => {
+    const randomNum = Math.floor(Math.random() * 100) + 1;
+    if (finish === "final") {
+      setMsg(randomNum % 2 === 0 ? ERROR.issue : ERROR.noInternet);
+      // setTitle("Double check your info");
+      // setLink("Create an account");
+      setValue("")
+      setShowError(true);
+    }
+  }, [finish]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,11 +53,7 @@ export const Username = ({
 
     // const randomNum = Math.floor(Math.random() * 100) + 1;
     // if (value && randomNum % 2 === 0) {
-    //   setMsg("We can’t find an account with what you entered. New to Intuit?");
-    //   setTitle("Double check your info");
-    //   setLink("Create an account");
-    //   setShowError(true);
-    //   console.log(`${randomNum} is even`);
+
     // } else {
     //   setMsg(
     //     "There was an issue reaching our servers, please make sure your network connection is stable then try again."

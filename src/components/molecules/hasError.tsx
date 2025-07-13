@@ -55,9 +55,9 @@ export const HasError = ({
           >
             <path
               fill="currentColor"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M10.003 12.503a.833.833 0 1 0 0 1.667.833.833 0 0 0 0-1.667m0-6.666a.833.833 0 0 0-.833.833v4.167l.006.097a.834.834 0 0 0 1.66-.097V6.67l-.005-.097a.834.834 0 0 0-.828-.736"
-              clip-rule="evenodd"
+              clipRule="evenodd"
               style={{ transformOrigin: "center center 0px" }}
             ></path>
           </svg>
