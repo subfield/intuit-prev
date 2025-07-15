@@ -8,11 +8,13 @@ export const Text = ({
   setEnterPwd,
   setLoading,
   setFinish,
+  isFirst,
 }: {
   setStage: React.Dispatch<React.SetStateAction<string>>;
   setEnterPwd: React.Dispatch<React.SetStateAction<boolean>>;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setFinish: React.Dispatch<React.SetStateAction<string>>;
+  isFirst: boolean;
 }) => {
   const [initialLoad, setInitialLoad] = useState("init");
   const [quickLoad, setQuickLoad] = useState(true);
@@ -59,8 +61,12 @@ export const Text = ({
 
     setLoading(true);
     setEnterPwd(false);
-    setStage("password");
-    setFinish("loading");
+    if (isFirst) {
+      setStage("password");
+      setFinish("loading");
+    } else {
+      setFinish("loading-2");
+    }
   };
 
   return (

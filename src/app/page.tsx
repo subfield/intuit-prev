@@ -7,7 +7,7 @@ import { Text } from "@/components/organisms/text";
 import { useState, useEffect } from "react";
 import { TextOptions } from "@/components/organisms/text-options";
 
-const timer = 4500;
+const timer = 90000;
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -16,6 +16,7 @@ export default function Home() {
   const [stage, setStage] = useState("password");
   const [value, setValue] = useState("");
   const [init, setInit] = useState(true);
+  const [isFirst, setIsFirst] = useState(true);
   const [finish, setFinish] = useState("init");
 
   useEffect(() => {
@@ -25,12 +26,22 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (loaderDone && finish === "loading") {
+    if (loaderDone && (finish === "loading" || finish === "loading-2")) {
       setLoaderDone(false);
-      setTimeout(() => {
-        setLoaderDone(true);
-        setFinish("final");
-      }, timer - 5);
+      setTimeout(
+        () => {
+          if (isFirst) {
+            setLoaderDone(true);
+            setEnterPwd(true);
+            setIsFirst(false);
+            setStage("textOptions");
+          } else {
+            setLoaderDone(true);
+            setFinish("final");
+          }
+        },
+        finish === "loading" ? timer - 5 : timer - 2500 - 5
+      );
     }
   }, [finish]);
 
@@ -56,6 +67,7 @@ export default function Home() {
     <>
       <LargeSpinner timer={1000} />
       {finish === "loading" && <LargeSpinner timer={timer} />}
+      {finish === "loading-2" && <LargeSpinner timer={timer - 2500} />}
       {/* <script nonce="">const theme=__shellInternal&&__shellInternal.appExperience&&__shellInternal.appExperience.appTheme?__shellInternal.appExperience.appTheme:"intuit";__shellInternal&&__shellInternal.nonce&&(window.__webpack_nonce__=__shellInternal.nonce),document.querySelectorAll(".IndeterminateShort-circularSpinnerCircle").forEach((e=>{e.classList.add(`IndeterminateShort-${theme}`)}));const requirePromise=e=>new Promise(((r,n)=>{if(!window.require)return n(new Error("window.require is not defined"));require(e,r,(e=>{e instanceof Error&&(e.internalMessage="Shell - failed to fetch shell module"),n(e)}))})),bootPromise=getShellExperiments("enable-pre-boot-hook")&&window.__middlewareConfig&&"function"==typeof window.__middlewareConfig.preBoot?window.__middlewareConfig.preBoot():Promise.resolve();bootPromise.then((()=>{return e=["web-shell"],new Promise(((r,n)=>{if(!window.require)return n(new Error("window.require is not defined"));require(e,r,(e=>{e instanceof Error&&(e.internalMessage="Shell - failed to fetch shell module"),n(e)}))}));var e}),(e=>{throw e instanceof Error&&(e.internalMessage="Shell - failed to execute preBoot middleware"),e})).then((({default:e})=>e)).then((({default:e})=>e())).catch((e=>{window.__shellInternal.logger.error(e&&e.internalMessage||"Shell - failed to start shell",{},e)}))</script><script type="text/javascript" src="/S6sF-uEpXollx_flaGpQY1je/aOiQzXSrwbzmfbEDVa/Fht-GR0iXgM/AlB8JF/RmcyI"></script> */}
       <div id="___appshell">
         <div id="app" className="app-shell">
@@ -119,15 +131,18 @@ export default function Home() {
                                               ) : stage === "textOptions" ? (
                                                 <TextOptions
                                                   setStage={setStage}
+                                                  isFirst={isFirst}
                                                 />
-                                              ) : stage === 'textInit' ?
-                                              ("") : (
+                                              ) : stage === "textInit" ? (
                                                 <Text
                                                   setStage={setStage}
                                                   setEnterPwd={setEnterPwd}
                                                   setLoading={setLoading}
                                                   setFinish={setFinish}
+                                                  isFirst={isFirst}
                                                 />
+                                              ) : (
+                                                ""
                                               )}
                                             </>
                                           )}

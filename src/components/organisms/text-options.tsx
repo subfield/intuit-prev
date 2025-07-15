@@ -1,7 +1,9 @@
 export const TextOptions = ({
   setStage,
+  isFirst,
 }: {
   setStage: React.Dispatch<React.SetStateAction<string>>;
+  isFirst: boolean;
 }) => {
   return (
     <>
@@ -14,8 +16,18 @@ export const TextOptions = ({
                 data-testid="challengePickerHeader"
                 id="challengePickerHeader"
               >
-                Verify it's you
+                {isFirst ? "Verify it's you" : "Request a new code"}
               </h2>
+              {!isFirst && (
+                <div
+                  data-testid="challengePickerSubheader"
+                  id="challengePickerSubheader"
+                  className="IuxH2AndDescription__StyledDescription-j40avf-3 cFzGEl"
+                >
+                  The verification code you enter is expired <br /> or is
+                  incorrect
+                </div>
+              )}
               <div
                 data-testid="challengePickerSubheader"
                 id="challengePickerSubheader"
