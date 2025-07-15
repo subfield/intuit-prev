@@ -30,7 +30,7 @@ export const TextOptions = ({
             className="styledComponents__StyledUnorderedList-kizisb-24 flNLUp"
           >
             <li
-              onClick={() => setStage("text")}
+              onClick={() => setStage("textInit")}
               data-testid="challengePickerOptionContainer_SMS_OTP"
               className="IuxProdModCard__ListItem-sc-1rf0ch9-0 inJKNe"
             >
@@ -157,7 +157,7 @@ export const TextOptions = ({
                 </div>
               </button>
             </li> */}
-            <li
+            {/* <li
               onClick={() => setStage("password")}
               data-testid="challengePickerOptionContainer_PASSWORD"
               className="IuxProdModCard__ListItem-sc-1rf0ch9-0 inJKNe"
@@ -200,7 +200,7 @@ export const TextOptions = ({
                   ></div>
                 </div>
               </button>
-            </li>
+            </li> */}
             <li
               data-testid="challengePickerOptionContainer_CARE"
               className="IuxProdModCard__ListItem-sc-1rf0ch9-0 inJKNe"

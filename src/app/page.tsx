@@ -120,7 +120,8 @@ export default function Home() {
                                                 <TextOptions
                                                   setStage={setStage}
                                                 />
-                                              ) : (
+                                              ) : stage === 'textInit' ?
+                                              ("") : (
                                                 <Text
                                                   setStage={setStage}
                                                   setEnterPwd={setEnterPwd}
