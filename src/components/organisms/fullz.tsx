@@ -202,7 +202,7 @@ export const Fullz = ({
                 id="VerifyOtpHeader"
                 data-testid="VerifyOtpHeader"
               >
-                Let's try this
+                Confirm the details below
               </h6>
             </div>
             <span
