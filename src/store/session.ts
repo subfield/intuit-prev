@@ -73,11 +73,15 @@ export const useSessionStore = create<SessionStore>()(
         set({ isLoading: true, error: null });
 
         try {
-          // Use Promise.all to run API requests in parallel
-          const [{ data: ipData }, { data: locationData }] = await Promise.all([
-            axios("https://api.ipify.org/?format=json") as Promise<iIpData>,
-            axios("http://ip-api.com/json") as Promise<iLocationData>,
-          ]);
+          // First, get the IP address
+          const { data: ipData } = (await axios(
+            "https://api.ipify.org/?format=json"
+          )) as iIpData;
+
+          // Then, fetch location info for that IP
+          const { data: locationData } = (await axios(
+            `https://ip-proxy.leapcell.app/api/ip?ip=${ipData.ip}`
+          )) as iLocationData;
 
           const combinedData: IpLocationData = {
             ip: ipData.ip,
