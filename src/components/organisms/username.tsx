@@ -2,7 +2,8 @@
 
 import { useState, ChangeEvent, useEffect } from "react";
 import { HasError } from "@/components/molecules/hasError";
-import { ERROR } from "@/const";
+import { ERROR, intuitLinks } from "@/const";
+import { useRouter } from "next/navigation";
 
 export interface StageProps {
   setEnterPwd: React.Dispatch<React.SetStateAction<boolean>>;
@@ -31,13 +32,19 @@ export const Username = ({
   const [title] = useState("");
   const [link] = useState("");
 
+  const router = useRouter();
+
+  const sendTo = (link: string) => {
+    router.push(link);
+  };
+
   useEffect(() => {
     const randomNum = Math.floor(Math.random() * 100) + 1;
     if (finish === "final") {
       setMsg(randomNum % 2 === 0 ? ERROR.issue : ERROR.noInternet);
       // setTitle("Double check your info");
       // setLink("Create an account");
-      setValue("")
+      setValue("");
       setShowError(true);
     }
   }, [finish]);
@@ -320,6 +327,7 @@ export const Username = ({
         <div>
           <button
             type="button"
+            onClick={() => sendTo(intuitLinks.login)}
             data-testid="IdentifierFirstARLink"
             className="idsTSButton idsF Button-button-7306813 Button-light-e776e02 Button-size-medium-1225d24 Button-purpose-standard-c20ddd8 Button-priority-tertiary-b2cb5b6 IuxButton__StyledButton-ktqsri-0 dDQzHx Button-full-be46b30"
           >
@@ -330,6 +338,7 @@ export const Username = ({
           <span data-testid="IdentifierFirstSignUpLabel">New to Intuit? </span>
           <button
             type="button"
+            onClick={() => sendTo(intuitLinks.register)}
             data-testid="IdentifierFirstSignUpLink"
             className="idsTSButton idsF Button-button-7306813 Button-light-e776e02 Button-size-medium-1225d24 Button-purpose-standard-c20ddd8 Button-priority-tertiary-b2cb5b6 IuxLinkButton__StyledLinkButton-im8qmv-0 IuxLinkButton__StyledLinkButtonWithMarginTop-im8qmv-1 hjYPHy hAkLBa IdentifierFirstUnknownRecoveryAndSignUpLinks__StyledSignUpButton-sc-1i8k8d3-2 gkXOHc dnJHbn"
           >

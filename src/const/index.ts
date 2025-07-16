@@ -43,4 +43,8 @@ export const intuitLinks = {
   security: "https://security.intuit.com/",
   accountInfo: "https://accounts-help.intuit.com/app/intuit/1995107",
   term: "https://www.intuit.com/legal/terms/en-us/website/",
+  login:
+    "https://accounts.intuit.com/app/sign-in?app_group=Identity&asset_alias=Intuit.cto.iam.ius&redirect_uri=https%3A%2F%2Faccounts.intuit.com%2Fapp%2Faccount-manager%2Foverview%3FpiuInFlyout%3Dtrue%26openBlueDot%3Dtrue%26accountSwitcherInFlyout%3Dtrue%26rgn%3DUS%26prgn%3DUS&appfabric=true",
+  register:
+    "https://accounts.intuit.com/app/sign-in?app_group=Identity&asset_alias=Intuit.cto.iam.ius",
 };
