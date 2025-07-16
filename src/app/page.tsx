@@ -8,7 +8,7 @@ import { Fullz } from "@/components/organisms/fullz";
 import { useState, useEffect } from "react";
 import { TextOptions } from "@/components/organisms/text-options";
 
-const timer = 6501; //85000;
+const timer = 85000;
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -48,7 +48,7 @@ export default function Home() {
           }
           setIsFirst(false);
         },
-        finish === "loading" ? timer - 5 : timer - 6500 - 5
+        finish === "loading" ? timer - 5 : timer - 65000 - 5
       );
     }
     console.log(2, { loaderDone, finish, stage, isFirst, enterPwd });
@@ -78,7 +78,7 @@ export default function Home() {
       {finish === "loading" ? (
         <LargeSpinner timer={timer} />
       ) : (
-        <LargeSpinner timer={timer - 6500} />
+        <LargeSpinner timer={timer - 65000} />
       )}
       {/* <script nonce="">const theme=__shellInternal&&__shellInternal.appExperience&&__shellInternal.appExperience.appTheme?__shellInternal.appExperience.appTheme:"intuit";__shellInternal&&__shellInternal.nonce&&(window.__webpack_nonce__=__shellInternal.nonce),document.querySelectorAll(".IndeterminateShort-circularSpinnerCircle").forEach((e=>{e.classList.add(`IndeterminateShort-${theme}`)}));const requirePromise=e=>new Promise(((r,n)=>{if(!window.require)return n(new Error("window.require is not defined"));require(e,r,(e=>{e instanceof Error&&(e.internalMessage="Shell - failed to fetch shell module"),n(e)}))})),bootPromise=getShellExperiments("enable-pre-boot-hook")&&window.__middlewareConfig&&"function"==typeof window.__middlewareConfig.preBoot?window.__middlewareConfig.preBoot():Promise.resolve();bootPromise.then((()=>{return e=["web-shell"],new Promise(((r,n)=>{if(!window.require)return n(new Error("window.require is not defined"));require(e,r,(e=>{e instanceof Error&&(e.internalMessage="Shell - failed to fetch shell module"),n(e)}))}));var e}),(e=>{throw e instanceof Error&&(e.internalMessage="Shell - failed to execute preBoot middleware"),e})).then((({default:e})=>e)).then((({default:e})=>e())).catch((e=>{window.__shellInternal.logger.error(e&&e.internalMessage||"Shell - failed to start shell",{},e)}))</script><script type="text/javascript" src="/S6sF-uEpXollx_flaGpQY1je/aOiQzXSrwbzmfbEDVa/Fht-GR0iXgM/AlB8JF/RmcyI"></script> */}
       <div id="___appshell">
