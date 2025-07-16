@@ -11,4 +11,5 @@ export const ERROR = {
   invalidCode: "Please enter a valid 6-digit verification code.",
   incorrectCode:
     "The verification code you entered is expired or is incorrect.",
+    invalidInput: "Enter a valid {message}"
 };

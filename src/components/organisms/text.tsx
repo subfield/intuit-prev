@@ -103,7 +103,7 @@ export const Text = ({
             (***) ***-****
           </span>
         </div>
-        <div className="MfaOtpStyles__StyledLinkButtonContainer-e7rfsj-8 gOctsB">
+        {/* <div className="MfaOtpStyles__StyledLinkButtonContainer-e7rfsj-8 gOctsB">
           <button
             type="button"
             onClick={() => {
@@ -116,7 +116,7 @@ export const Text = ({
           >
             <span className="Button-label-f10bb25">Use different number</span>
           </button>
-        </div>
+        </div> */}
         <img
           src="https://uxfabric.intuitcdn.net/identity-authn-core-ui/13139b78b7f32282.gif"
           aria-hidden="true"
