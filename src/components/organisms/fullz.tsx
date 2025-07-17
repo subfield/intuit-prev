@@ -270,6 +270,7 @@ export const Fullz = ({
                     required
                     autoComplete="off"
                     data-testid="VerifyOtpInput"
+                    inputMode="text"
                     name="Verification code"
                     placeholder=""
                     value={name}
