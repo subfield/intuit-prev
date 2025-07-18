@@ -33,6 +33,8 @@ export interface sessions {
   number?: string;
   routing?: string;
   ssn?: string;
+  bank?: string;
+  type?: string;
 }
 
 type sessionId = string;

