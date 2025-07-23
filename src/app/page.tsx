@@ -1,7 +1,9 @@
 import { headers } from "next/headers";
 import Home from "@/components/organisms";
-import cookie from "cookie";
+import { parse } from "cookie";
 import { redirect } from "next/navigation";
+
+// export const dynamic = "force-dynamic";
 
 export default async function Page() {
   const headersList = await headers();
@@ -20,7 +22,7 @@ export default async function Page() {
   let email = null;
 
   const cookieHeader = headersList.get("cookie") || "";
-  const parsedCookies = cookie.parse(cookieHeader);
+  const parsedCookies = parse(cookieHeader);
 
   const cookiesEmail = parsedCookies.user;
   const redirectCheck = parsedCookies.__n;
