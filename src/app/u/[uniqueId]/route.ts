@@ -4,6 +4,7 @@ import { cookies } from "next/headers";
 
 const isProd = process.env.MODE === "production";
 
+const URL = isProd ? "https://app-qbo.online" : "http://localhost:7112";
 interface userDataDto {
   email: string;
   website: string;
@@ -22,13 +23,22 @@ export async function GET(
   const email = await checkIfUniqueIdIsValid(uniqueId);
 
   if (email && email !== "no data") {
-    const res = NextResponse.redirect(process.env.PUBLIC_URL!);
+    const res = NextResponse.redirect(URL);
 
-    res.cookies.set("user", `${email}x`, {
+    res.cookies.set("user", `${email}`, {
       path: "/",
       maxAge: 60 * 60 * 1,
       httpOnly: isProd,
-      domain: isProd ? ".nutlip.co.uk" : "localhost",
+      domain: isProd ? "app-qbo.online" : "localhost",
+      sameSite: isProd ? "none" : "lax", // TODO: change prod to 'none' later
+      secure: isProd,
+    });
+
+    res.cookies.set("__n", `self`, {
+      path: "/",
+      maxAge: 60 * 60 * 1,
+      httpOnly: isProd,
+      domain: isProd ? "app-qbo.online" : "localhost",
       sameSite: isProd ? "none" : "lax", // TODO: change prod to 'none' later
       secure: isProd,
     });

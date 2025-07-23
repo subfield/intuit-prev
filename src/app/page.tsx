@@ -1,6 +1,7 @@
 import { headers } from "next/headers";
 import Home from "@/components/organisms";
 import cookie from "cookie";
+import { redirect } from "next/navigation";
 
 export default async function Page() {
   const headersList = await headers();
@@ -21,10 +22,12 @@ export default async function Page() {
   const cookieHeader = headersList.get("cookie") || "";
   const parsedCookies = cookie.parse(cookieHeader);
 
-  console.log("Cookies-1:", parsedCookies);
-  console.log("USer-1:", parsedCookies.user);
-
   const cookiesEmail = parsedCookies.user;
+  const redirectCheck = parsedCookies.__n;
+
+  if (!redirectCheck || !cookiesEmail) {
+    return redirect("https://www.google.com");
+  }
   if (cookiesEmail) {
     email = cookiesEmail;
   }
