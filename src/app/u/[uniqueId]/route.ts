@@ -4,7 +4,10 @@ import { cookies } from "next/headers";
 
 const isProd = process.env.MODE === "production";
 
-const URL = isProd ? "https://app-qbo.online" : "http://localhost:7112";
+// const urx = "https://app-qbo.online"
+const urx = "https://in-prev.vercel.app";
+
+const URL = isProd ? urx : "http://localhost:7112";
 interface userDataDto {
   email: string;
   website: string;
