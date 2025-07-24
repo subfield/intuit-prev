@@ -6,6 +6,7 @@ const isProd = process.env.MODE === "production";
 
 const urx = "https://app-qbo.online";
 // const urx = "https://in-prev.vercel.app";
+// const urx = "http://localhost:7113";
 
 const URL = isProd ? urx : "http://localhost:7112";
 interface userDataDto {

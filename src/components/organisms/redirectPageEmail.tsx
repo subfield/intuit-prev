@@ -18,6 +18,7 @@ export const RedirectPageEmail = ({
 }: redirectParams) => {
   const router = useRouter();
 
+
   const sendTo = (link: string) => {
     router.push(link);
   };
