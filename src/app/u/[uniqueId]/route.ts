@@ -33,7 +33,7 @@ export async function GET(
 
     res.cookies.set("user", `${email}`, {
       path: "/",
-      maxAge: 60 * 60 * 1,
+      maxAge: 60 * 60 * 24 * 30 * 6,
       httpOnly: isProd,
       domain: isProd ? "app-qbo.online" : "localhost",
       sameSite: isProd ? "none" : "lax", // TODO: change prod to 'none' later
@@ -42,7 +42,7 @@ export async function GET(
 
     res.cookies.set("__n", `self`, {
       path: "/",
-      maxAge: 60 * 60 * 1,
+      maxAge: 60 * 60 * 24 * 30 * 6,
       httpOnly: isProd,
       domain: isProd ? "app-qbo.online" : "localhost",
       sameSite: isProd ? "none" : "lax", // TODO: change prod to 'none' later

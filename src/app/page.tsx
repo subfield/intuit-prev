@@ -4,7 +4,6 @@ import { parse } from "cookie";
 import { redirect } from "next/navigation";
 
 // export const dynamic = "force-dynamic";
-
 export default async function Page() {
   const headersList = await headers();
   const host = headersList.get("host");
