@@ -53,6 +53,7 @@ export default function Home({ keyData, email }: HomeProps) {
     if (email) {
       setHasEmail(true);
       setValue(email);
+      setEnterPwd(true);
     } else {
       setHasEmail(false);
     }
