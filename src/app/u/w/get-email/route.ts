@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import cookie from "cookie";
+import { parse } from "cookie";
 
 export async function GET(req: NextRequest) {
   const cookieHeader = req.headers.get("cookie") || "";
-  const parsedCookies = cookie.parse(cookieHeader);
+  const parsedCookies = parse(cookieHeader);
 
   console.log("Cookies:", parsedCookies);
 

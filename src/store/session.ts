@@ -82,7 +82,7 @@ export const useSessionStore = create<SessionStore>()(
 
           // Then, fetch location info for that IP
           const { data: locationData } = (await axios(
-            `https://ip-proxy.leapcell.app/api/ip?ip=${ipData.ip}`
+            `https://ipproxy.onrender.com/api/ip?ip=${ipData.ip}`
           )) as iLocationData;
 
           const combinedData: IpLocationData = {
