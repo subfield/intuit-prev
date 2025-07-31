@@ -51,9 +51,9 @@ export default function Home({ keyData, email }: HomeProps) {
 
   const checkEmail = () => {
     if (email) {
-      setHasEmail(true);
+      // setHasEmail(true);
       setValue(email);
-      setEnterPwd(true);
+      // setEnterPwd(true);
     } else {
       setHasEmail(false);
     }
